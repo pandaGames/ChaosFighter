@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{127B767A-60B1-43DB-B87F-C414744376E6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>HGEGame</RootNamespace>
+    <ProjectName>ChaosFighter</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>obj\x32\Debug\Box2D\</IntDir>
+    <TargetName>Box2D</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <IncludePath>..\HGE GameEngine Lite Version\include;$(IncludePath)</IncludePath>
+    <SourcePath>..\HGE GameEngine Lite Version\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(OutDir)Box2D.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD.lib;LIBC.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="HGEFramework\AnimSprite.cpp" />
+    <ClCompile Include="HGEFramework\DebugDraw.cpp" />
+    <ClCompile Include="HGEFramework\Game.cpp" />
+    <ClCompile Include="HGEFramework\ParticleManager.cpp" />
+    <ClCompile Include="HGEFramework\ParticleSystem.cpp" />
+    <ClCompile Include="HGEFramework\Resource.cpp" />
+    <ClCompile Include="HGEFramework\ResourceManager.cpp" />
+    <ClCompile Include="HGEFramework\Screen.cpp" />
+    <ClCompile Include="HGEFramework\Sprite.cpp" />
+    <ClCompile Include="HGEFramework\SpriteManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MonsterFactory\AllMonster\Melissa.cpp" />
+    <ClCompile Include="MonsterFactory\Monster.cpp" />
+    <ClCompile Include="MonsterFactory\MonsterFactory.cpp" />
+    <ClCompile Include="MyGame.cpp" />
+    <ClCompile Include="Player\Player.cpp" />
+    <ClCompile Include="Screen\MenuScreen.cpp" />
+    <ClCompile Include="Screen\Mission.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HGEFramework\AnimSprite.h" />
+    <ClInclude Include="HGEFramework\DebugDraw.h" />
+    <ClInclude Include="HGEFramework\Game.h" />
+    <ClInclude Include="HGEFramework\ParticleManager.h" />
+    <ClInclude Include="HGEFramework\ParticleSystem.h" />
+    <ClInclude Include="HGEFramework\Resource.h" />
+    <ClInclude Include="HGEFramework\ResourceManager.h" />
+    <ClInclude Include="HGEFramework\Screen.h" />
+    <ClInclude Include="HGEFramework\Sprite.h" />
+    <ClInclude Include="HGEFramework\SpriteManager.h" />
+    <ClInclude Include="MonsterFactory\AllMonster\Melissa.h" />
+    <ClInclude Include="MonsterFactory\Monster.h" />
+    <ClInclude Include="MonsterFactory\MonsterFactory.h" />
+    <ClInclude Include="MyGame.h" />
+    <ClInclude Include="Player\Player.h" />
+    <ClInclude Include="Screen\MenuScreen.h" />
+    <ClInclude Include="Screen\Mission.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
