@@ -1,9 +1,12 @@
-﻿生成启动时间为 2014/1/29 10:47:00。
+﻿生成启动时间为 2014/1/29 18:28:26。
      1>项目“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\HGEGame\HGEGame.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
-         正在对“obj\x32\Debug\Box2D\ChaosFighter.unsuccessfulbuild”执行 Touch 任务。
+         正在创建“obj\x32\Debug\Box2D\ChaosFighter.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         所有输出均为最新。
+         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\Program Files\Box2D" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\x32\Debug\Box2D\\" /Fd"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.pdb" /Gd /TP /analyze- /errorReport:prompt /FAu Screen\Mission.cpp
+         Mission.cpp
+     1>d:\mycodes\chaosfighter\trunk\chaosfighter\hgegame\screen\mission.cpp(29): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\mycodes\chaosfighter\trunk\chaosfighter\hgegame\screen\mission.cpp(32): warning C4244: “参数”: 从“double”转换到“FLOAT”，可能丢失数据
        Link:
          d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.lib" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Program Files\Box2D\Box2D\Debug" d3d9.lib d3dx9.lib winmm.lib dinput8.lib dxguid.lib Box2D.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMTD.lib /NODEFAULTLIB:LIBC.lib /MANIFEST /ManifestFile:"obj\x32\Debug\Box2D\Box2D.lib.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.lib" /MACHINE:X86 obj\x32\Debug\Box2D\AnimSprite.obj
          obj\x32\Debug\Box2D\DebugDraw.obj
@@ -23,50 +26,6 @@
          obj\x32\Debug\Box2D\Player.obj
          obj\x32\Debug\Box2D\MenuScreen.obj
          obj\x32\Debug\Box2D\Mission.obj
-     1>Box2D.lib(b2BlockAllocator.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2BlockAllocator.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Body.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Body.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2BroadPhase.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2BroadPhase.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2ChainAndCircleContact.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2ChainAndCircleContact.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2ChainAndPolygonContact.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2ChainAndPolygonContact.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2ChainShape.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2ChainShape.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2CircleContact.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2CircleContact.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2CircleShape.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2CircleShape.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2CollideCircle.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2CollideCircle.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2CollideEdge.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2CollideEdge.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2CollidePolygon.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2CollidePolygon.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Collision.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Collision.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Contact.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Contact.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2ContactManager.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2ContactManager.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2ContactSolver.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2ContactSolver.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Distance.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Distance.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2DistanceJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2DistanceJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Draw.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Draw.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2DynamicTree.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2DynamicTree.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2EdgeAndCircleContact.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2EdgeAndCircleContact.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2EdgeAndPolygonContact.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2EdgeAndPolygonContact.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2EdgeShape.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2EdgeShape.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Fixture.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Fixture.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2FrictionJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2FrictionJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2GearJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2GearJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Island.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Island.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Joint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Joint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Math.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Math.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2MouseJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2MouseJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2PolygonAndCircleContact.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2PolygonAndCircleContact.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2PolygonContact.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2PolygonContact.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2PolygonShape.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2PolygonShape.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2PrismaticJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2PrismaticJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2PulleyJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2PulleyJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2RevoluteJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2RevoluteJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2RopeJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2RopeJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Settings.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Settings.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2StackAllocator.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2StackAllocator.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2TimeOfImpact.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2TimeOfImpact.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2Timer.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2Timer.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2WeldJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2WeldJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2WheelJoint.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2WheelJoint.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2World.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2World.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-     1>Box2D.lib(b2WorldCallbacks.obj) : warning LNK4099: 未找到 PDB“vc90.pdb”(使用“Box2D.lib(b2WorldCallbacks.obj)”或在“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\vc90.pdb”中寻找)；正在链接对象，如同没有调试信息一样
          HGEGame.vcxproj -> D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.lib
        Manifest:
          C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.lib.manifest" /manifest obj\x32\Debug\Box2D\Box2D.lib.intermediate.manifest
@@ -77,4 +36,4 @@
 
 生成成功。
 
-已用时间 00:00:01.22
+已用时间 00:00:02.63

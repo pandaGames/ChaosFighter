@@ -16,5 +16,10 @@ public:
 private:
 	CPlayer * m_pPlayer;
 	hgeFont * m_pFont;
+
+	//Èý²ã±³¾°
+	CSprite * m_pBgFront;
+	CSprite * m_pBgMiddle;
+	CSprite * m_pBgBack;
 };
 

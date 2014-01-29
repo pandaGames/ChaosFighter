@@ -125,3 +125,7 @@ void CPlayer::Control()
 	}
 }
 
+D3DXVECTOR3 CPlayer::GetPos()
+{
+	return m_pPlayer->GetPos();
+}

@@ -3,8 +3,6 @@
 #include "Screen/MenuScreen.h"
 #include "Screen/Mission.h"
 
-//#pragma comment(lib, "D:\developTool\GameEngine\Box2D_v2.2.1_VS2008\Box2D\Debug\box2d.lib")
-
 class CMyGame:
 	public CGame
 {
@@ -17,7 +15,8 @@ public:
 	void	FrameFunc(float fDeltaTime);
 	void	RenderFunc();
 	void	Release();
-
+	//³õÊ¼»¯ÌùÍ¼
+	void InitTextures();
 public:
 
 	CScreen * m_pMenu;

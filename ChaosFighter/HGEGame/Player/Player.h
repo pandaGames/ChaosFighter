@@ -31,6 +31,7 @@ public:
 	void ZSwordC();
 
 	void SetPos(D3DXVECTOR3 vPos);
+	D3DXVECTOR3 GetPos();
 	CAnimSprite * m_pPlayer;
 private:
 	CGame * m_pGame;

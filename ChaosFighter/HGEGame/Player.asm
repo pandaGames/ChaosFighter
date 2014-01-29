@@ -223,9 +223,9 @@ __real@42b40000 DD 042b40000r			; 90
 CONST	ENDS
 ;	COMDAT ??0CPlayer@@QAE@PAVCGame@@PAVCSpriteManager@@@Z
 _TEXT	SEGMENT
-$T103235 = -264						; size = 12
-$T103237 = -244						; size = 12
-$T103238 = -224						; size = 12
+$T103236 = -264						; size = 12
+$T103238 = -244						; size = 12
+$T103239 = -224						; size = 12
 _this$ = -12						; size = 4
 __$ArrayPad$ = -4					; size = 4
 _pGame$ = 8						; size = 4
@@ -281,7 +281,7 @@ _pSprManager$ = 12					; size = 4
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T103235[ebp]
+	lea	ecx, DWORD PTR $T103236[ebp]
 	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
@@ -305,7 +305,7 @@ _pSprManager$ = 12					; size = 4
 	push	ecx
 	fld	DWORD PTR __real@41f00000
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T103237[ebp]
+	lea	ecx, DWORD PTR $T103238[ebp]
 	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
@@ -347,7 +347,7 @@ _pSprManager$ = 12					; size = 4
 	push	ecx
 	fld	DWORD PTR __real@42c80000
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T103238[ebp]
+	lea	ecx, DWORD PTR $T103239[ebp]
 	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
 	mov	edx, esp
@@ -1292,15 +1292,15 @@ __real@bfb999999999999a DQ 0bfb999999999999ar	; -0.1
 CONST	ENDS
 ;	COMDAT ?Control@CPlayer@@QAEXXZ
 _TEXT	SEGMENT
-$T104299 = -344						; size = 8
-$T104300 = -328						; size = 8
-$T104301 = -312						; size = 8
-$T104302 = -296						; size = 8
-$T104303 = -280						; size = 8
-$T104304 = -264						; size = 8
-$T104305 = -248						; size = 8
-$T104306 = -232						; size = 8
-$T104307 = -216						; size = 8
+$T104306 = -344						; size = 8
+$T104307 = -328						; size = 8
+$T104308 = -312						; size = 8
+$T104309 = -296						; size = 8
+$T104310 = -280						; size = 8
+$T104311 = -264						; size = 8
+$T104312 = -248						; size = 8
+$T104313 = -232						; size = 8
+$T104314 = -216						; size = 8
 _this$ = -8						; size = 4
 ?Control@CPlayer@@QAEXXZ PROC				; CPlayer::Control, COMDAT
 ; _this$ = ecx
@@ -1479,7 +1479,7 @@ $LN22@Control:
 	test	ecx, ecx
 	jne	$LN1@Control
 ; Line 94
-	lea	eax, DWORD PTR $T104299[ebp]
+	lea	eax, DWORD PTR $T104306[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1533,7 +1533,7 @@ $LN17@Control:
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104300[ebp]
+	lea	ecx, DWORD PTR $T104307[ebp]
 	call	??0b2Vec2@@QAE@MM@Z			; b2Vec2::b2Vec2
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -1541,7 +1541,7 @@ $LN17@Control:
 	call	?ApplyForce@b2Body@@QAEXABUb2Vec2@@0@Z	; b2Body::ApplyForce
 $LN15@Control:
 ; Line 100
-	lea	eax, DWORD PTR $T104301[ebp]
+	lea	eax, DWORD PTR $T104308[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1560,7 +1560,7 @@ $LN15@Control:
 	jmp	SHORT $LN10@Control
 $LN14@Control:
 ; Line 101
-	lea	eax, DWORD PTR $T104302[ebp]
+	lea	eax, DWORD PTR $T104309[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1579,7 +1579,7 @@ $LN14@Control:
 	jmp	SHORT $LN10@Control
 $LN12@Control:
 ; Line 102
-	lea	eax, DWORD PTR $T104303[ebp]
+	lea	eax, DWORD PTR $T104310[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1622,7 +1622,7 @@ $LN10@Control:
 	mov	ecx, DWORD PTR [eax]
 	call	?SetFlip@CAnimSprite@@QAEX_N00@Z	; CAnimSprite::SetFlip
 ; Line 108
-	lea	eax, DWORD PTR $T104304[ebp]
+	lea	eax, DWORD PTR $T104311[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1643,7 +1643,7 @@ $LN10@Control:
 	push	ecx
 	fld	DWORD PTR __real@40000000
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104305[ebp]
+	lea	ecx, DWORD PTR $T104312[ebp]
 	call	??0b2Vec2@@QAE@MM@Z			; b2Vec2::b2Vec2
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -1687,7 +1687,7 @@ $LN9@Control:
 	mov	ecx, DWORD PTR [eax]
 	call	?SetFlip@CAnimSprite@@QAEX_N00@Z	; CAnimSprite::SetFlip
 ; Line 117
-	lea	eax, DWORD PTR $T104306[ebp]
+	lea	eax, DWORD PTR $T104313[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1708,7 +1708,7 @@ $LN9@Control:
 	push	ecx
 	fld	DWORD PTR __real@c0000000
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104307[ebp]
+	lea	ecx, DWORD PTR $T104314[ebp]
 	call	??0b2Vec2@@QAE@MM@Z			; b2Vec2::b2Vec2
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -1863,7 +1863,7 @@ PUBLIC	?IsAwake@b2Body@@QBE_NXZ			; b2Body::IsAwake
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT ?ApplyForce@b2Body@@QAEXABUb2Vec2@@0@Z
 _TEXT	SEGMENT
-$T104328 = -216						; size = 8
+$T104335 = -216						; size = 8
 _this$ = -8						; size = 4
 _force$ = 8						; size = 4
 _point$ = 12						; size = 4
@@ -1915,7 +1915,7 @@ $LN1@ApplyForce:
 	push	ecx
 	mov	edx, DWORD PTR _point$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T104328[ebp]
+	lea	eax, DWORD PTR $T104335[ebp]
 	push	eax
 	call	??G@YA?AUb2Vec2@@ABU0@0@Z		; operator-
 	add	esp, 12					; 0000000cH
@@ -2230,5 +2230,48 @@ _this$ = -8						; size = 4
 	pop	ebp
 	ret	0
 ?IsAwake@b2Body@@QBE_NXZ ENDP				; b2Body::IsAwake
+_TEXT	ENDS
+PUBLIC	?GetPos@CPlayer@@QAE?AUD3DXVECTOR3@@XZ		; CPlayer::GetPos
+EXTRN	?GetPos@CSprite@@QAE?AUD3DXVECTOR3@@XZ:PROC	; CSprite::GetPos
+; Function compile flags: /Odtp /RTCsu /ZI
+;	COMDAT ?GetPos@CPlayer@@QAE?AUD3DXVECTOR3@@XZ
+_TEXT	SEGMENT
+_this$ = -8						; size = 4
+___$ReturnUdt$ = 8					; size = 4
+?GetPos@CPlayer@@QAE?AUD3DXVECTOR3@@XZ PROC		; CPlayer::GetPos, COMDAT
+; _this$ = ecx
+; File d:\mycodes\chaosfighter\trunk\chaosfighter\hgegame\player\player.cpp
+; Line 129
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 204				; 000000ccH
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-204]
+	mov	ecx, 51					; 00000033H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+; Line 130
+	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx]
+	call	?GetPos@CSprite@@QAE?AUD3DXVECTOR3@@XZ	; CSprite::GetPos
+	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
+; Line 131
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 204				; 000000ccH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	4
+?GetPos@CPlayer@@QAE?AUD3DXVECTOR3@@XZ ENDP		; CPlayer::GetPos
 _TEXT	ENDS
 END
