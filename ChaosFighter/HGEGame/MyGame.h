@@ -3,6 +3,8 @@
 #include "Screen/MenuScreen.h"
 #include "Screen/Mission.h"
 
+//@author shallow
+
 class CMyGame:
 	public CGame
 {
@@ -15,7 +17,7 @@ public:
 	void	FrameFunc(float fDeltaTime);
 	void	RenderFunc();
 	void	Release();
-	//³õÊ¼»¯ÌùÍ¼
+	//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Í¼
 	void InitTextures();
 public:
 
