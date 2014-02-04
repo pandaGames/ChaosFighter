@@ -21,5 +21,8 @@ private:
 	CSprite * m_pBgFront;
 	CSprite * m_pBgMiddle;
 	CSprite * m_pBgBack;
+
+	//ÆÆÀÃµÄÆì
+	CAnimSprite * m_pFlag_1;
 };
 

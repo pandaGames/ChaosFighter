@@ -350,10 +350,10 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv138 = -268						; size = 4
 tv89 = -268						; size = 4
-$T105805 = -260						; size = 4
-$T105806 = -248						; size = 4
-$T105809 = -236						; size = 4
-$T105810 = -224						; size = 4
+$T105811 = -260						; size = 4
+$T105812 = -248						; size = 4
+$T105815 = -236						; size = 4
+$T105816 = -224						; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -12						; size = 12
 ?InitGame@CMyGame@@UAE_NXZ PROC				; CMyGame::InitGame, COMDAT
@@ -398,13 +398,13 @@ $LN1@InitGame:
 	push	20					; 00000014H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T105806[ebp], eax
+	mov	DWORD PTR $T105812[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T105806[ebp], 0
+	cmp	DWORD PTR $T105812[ebp], 0
 	je	SHORT $LN4@InitGame
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T105806[ebp]
+	mov	ecx, DWORD PTR $T105812[ebp]
 	call	??0CMenuScreen@@QAE@PAVCGame@@@Z	; CMenuScreen::CMenuScreen
 	mov	DWORD PTR tv89[ebp], eax
 	jmp	SHORT $LN5@InitGame
@@ -412,22 +412,22 @@ $LN4@InitGame:
 	mov	DWORD PTR tv89[ebp], 0
 $LN5@InitGame:
 	mov	ecx, DWORD PTR tv89[ebp]
-	mov	DWORD PTR $T105805[ebp], ecx
+	mov	DWORD PTR $T105811[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR $T105805[ebp]
+	mov	eax, DWORD PTR $T105811[ebp]
 	mov	DWORD PTR [edx+52], eax
 ; Line 24
-	push	36					; 00000024H
+	push	40					; 00000028H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T105810[ebp], eax
+	mov	DWORD PTR $T105816[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	cmp	DWORD PTR $T105810[ebp], 0
+	cmp	DWORD PTR $T105816[ebp], 0
 	je	SHORT $LN6@InitGame
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T105810[ebp]
+	mov	ecx, DWORD PTR $T105816[ebp]
 	call	??0CMission@@QAE@PAVCGame@@@Z		; CMission::CMission
 	mov	DWORD PTR tv138[ebp], eax
 	jmp	SHORT $LN7@InitGame
@@ -435,10 +435,10 @@ $LN6@InitGame:
 	mov	DWORD PTR tv138[ebp], 0
 $LN7@InitGame:
 	mov	ecx, DWORD PTR tv138[ebp]
-	mov	DWORD PTR $T105809[ebp], ecx
+	mov	DWORD PTR $T105815[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR $T105809[ebp]
+	mov	eax, DWORD PTR $T105815[ebp]
 	mov	DWORD PTR [edx+56], eax
 ; Line 26
 	mov	eax, DWORD PTR _this$[ebp]
@@ -465,13 +465,13 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?InitGame@CMyGame@@UAE_NXZ$0:
-	mov	eax, DWORD PTR $T105806[ebp]
+	mov	eax, DWORD PTR $T105812[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
 __unwindfunclet$?InitGame@CMyGame@@UAE_NXZ$1:
-	mov	eax, DWORD PTR $T105810[ebp]
+	mov	eax, DWORD PTR $T105816[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -569,10 +569,10 @@ EXTRN	?Release@CGame@@UAEXXZ:PROC			; CGame::Release
 _TEXT	SEGMENT
 tv89 = -256						; size = 4
 tv78 = -256						; size = 4
-$T105833 = -248						; size = 4
-$T105834 = -236						; size = 4
-$T105837 = -224						; size = 4
-$T105838 = -212						; size = 4
+$T105839 = -248						; size = 4
+$T105840 = -236						; size = 4
+$T105843 = -224						; size = 4
+$T105844 = -212						; size = 4
 _this$ = -8						; size = 4
 ?Release@CMyGame@@UAEXXZ PROC				; CMyGame::Release, COMDAT
 ; _this$ = ecx
@@ -599,16 +599,16 @@ _this$ = -8						; size = 4
 	je	SHORT $LN2@Release
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+52]
-	mov	DWORD PTR $T105834[ebp], ecx
-	mov	edx, DWORD PTR $T105834[ebp]
-	mov	DWORD PTR $T105833[ebp], edx
-	cmp	DWORD PTR $T105833[ebp], 0
+	mov	DWORD PTR $T105840[ebp], ecx
+	mov	edx, DWORD PTR $T105840[ebp]
+	mov	DWORD PTR $T105839[ebp], edx
+	cmp	DWORD PTR $T105839[ebp], 0
 	je	SHORT $LN5@Release
 	mov	esi, esp
 	push	1
-	mov	eax, DWORD PTR $T105833[ebp]
+	mov	eax, DWORD PTR $T105839[ebp]
 	mov	edx, DWORD PTR [eax]
-	mov	ecx, DWORD PTR $T105833[ebp]
+	mov	ecx, DWORD PTR $T105839[ebp]
 	mov	eax, DWORD PTR [edx]
 	call	eax
 	cmp	esi, esp
@@ -626,16 +626,16 @@ $LN2@Release:
 	je	SHORT $LN1@Release
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+56]
-	mov	DWORD PTR $T105838[ebp], ecx
-	mov	edx, DWORD PTR $T105838[ebp]
-	mov	DWORD PTR $T105837[ebp], edx
-	cmp	DWORD PTR $T105837[ebp], 0
+	mov	DWORD PTR $T105844[ebp], ecx
+	mov	edx, DWORD PTR $T105844[ebp]
+	mov	DWORD PTR $T105843[ebp], edx
+	cmp	DWORD PTR $T105843[ebp], 0
 	je	SHORT $LN7@Release
 	mov	esi, esp
 	push	1
-	mov	eax, DWORD PTR $T105837[ebp]
+	mov	eax, DWORD PTR $T105843[ebp]
 	mov	edx, DWORD PTR [eax]
-	mov	ecx, DWORD PTR $T105837[ebp]
+	mov	ecx, DWORD PTR $T105843[ebp]
 	mov	eax, DWORD PTR [edx]
 	call	eax
 	cmp	esi, esp
@@ -659,27 +659,39 @@ $LN1@Release:
 	ret	0
 ?Release@CMyGame@@UAEXXZ ENDP				; CMyGame::Release
 _TEXT	ENDS
+PUBLIC	??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@ ; `string'
+PUBLIC	??_C@_0DF@GEHALMDL@Resource?1Texture?1Maps?1chapter1?1c@ ; `string'
 PUBLIC	??_C@_1BK@DHGJHBGH@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAB?$AAa?$AAc?$AAk?$AA?$AA@ ; `string'
-PUBLIC	??_C@_0CD@CEBODNKL@Resource?1Texture?1Maps?1scene1?13?4p@ ; `string'
+PUBLIC	??_C@_0DA@EGBOMHNJ@Resource?1Texture?1Maps?1chapter1?1c@ ; `string'
 PUBLIC	??_C@_1BO@OHOKLLPB@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAM?$AAi?$AAd?$AAd?$AAl?$AAe?$AA?$AA@ ; `string'
-PUBLIC	??_C@_0CD@OPECOOAO@Resource?1Texture?1Maps?1scene1?12?4p@ ; `string'
+PUBLIC	??_C@_0DA@INECBEHM@Resource?1Texture?1Maps?1chapter1?1c@ ; `string'
 PUBLIC	??_C@_1BM@CBBODJAA@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAF?$AAr?$AAo?$AAn?$AAt?$AA?$AA@ ; `string'
-PUBLIC	??_C@_0CD@GJNGJMKA@Resource?1Texture?1Maps?1scene1?11?4p@ ; `string'
-PUBLIC	??_C@_1O@LPGDINIK@?$AAA?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@ ; `string'
-PUBLIC	??_C@_0BM@LBNNLKEF@Resource?1Texture?1Action?4png?$AA@ ; `string'
+PUBLIC	??_C@_0DA@LNGGGNC@Resource?1Texture?1Maps?1chapter1?1c@ ; `string'
+PUBLIC	??_C@_1M@ODGMBGCH@?$AAR?$AAo?$AAl?$AAe?$AA1?$AA?$AA@ ; `string'
+PUBLIC	??_C@_0CB@EOAMNKL@Resource?1Texture?1Role?1role_1?4png@ ; `string'
 PUBLIC	??_C@_15KGOJFLP@?$AAB?$AAG?$AA?$AA@		; `string'
 PUBLIC	??_C@_0BI@LCJJCPEN@Resource?1Texture?1bg?4png?$AA@ ; `string'
 EXTRN	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z:PROC ; CResourceManager::LoadTexture
+;	COMDAT ??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@
+CONST	SEGMENT
+??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@ DB 'F', 00H, 'l'
+	DB	00H, 'a', 00H, 'g', 00H, '_', 00H, '1', 00H, 00H, 00H ; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0DF@GEHALMDL@Resource?1Texture?1Maps?1chapter1?1c@
+CONST	SEGMENT
+??_C@_0DF@GEHALMDL@Resource?1Texture?1Maps?1chapter1?1c@ DB 'Resource/Tex'
+	DB	'ture/Maps/chapter1/components/flag_1.png', 00H ; `string'
+CONST	ENDS
 ;	COMDAT ??_C@_1BK@DHGJHBGH@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAB?$AAa?$AAc?$AAk?$AA?$AA@
 CONST	SEGMENT
 ??_C@_1BK@DHGJHBGH@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAB?$AAa?$AAc?$AAk?$AA?$AA@ DB 'S'
 	DB	00H, 'c', 00H, 'e', 00H, 'n', 00H, 'e', 00H, '1', 00H, 'B', 00H
 	DB	'g', 00H, 'B', 00H, 'a', 00H, 'c', 00H, 'k', 00H, 00H, 00H ; `string'
 CONST	ENDS
-;	COMDAT ??_C@_0CD@CEBODNKL@Resource?1Texture?1Maps?1scene1?13?4p@
+;	COMDAT ??_C@_0DA@EGBOMHNJ@Resource?1Texture?1Maps?1chapter1?1c@
 CONST	SEGMENT
-??_C@_0CD@CEBODNKL@Resource?1Texture?1Maps?1scene1?13?4p@ DB 'Resource/Te'
-	DB	'xture/Maps/scene1/3.png', 00H		; `string'
+??_C@_0DA@EGBOMHNJ@Resource?1Texture?1Maps?1chapter1?1c@ DB 'Resource/Tex'
+	DB	'ture/Maps/chapter1/chapter1-1-3.png', 00H	; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_1BO@OHOKLLPB@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAM?$AAi?$AAd?$AAd?$AAl?$AAe?$AA?$AA@
 CONST	SEGMENT
@@ -688,10 +700,10 @@ CONST	SEGMENT
 	DB	'g', 00H, 'M', 00H, 'i', 00H, 'd', 00H, 'd', 00H, 'l', 00H, 'e'
 	DB	00H, 00H, 00H				; `string'
 CONST	ENDS
-;	COMDAT ??_C@_0CD@OPECOOAO@Resource?1Texture?1Maps?1scene1?12?4p@
+;	COMDAT ??_C@_0DA@INECBEHM@Resource?1Texture?1Maps?1chapter1?1c@
 CONST	SEGMENT
-??_C@_0CD@OPECOOAO@Resource?1Texture?1Maps?1scene1?12?4p@ DB 'Resource/Te'
-	DB	'xture/Maps/scene1/2.png', 00H		; `string'
+??_C@_0DA@INECBEHM@Resource?1Texture?1Maps?1chapter1?1c@ DB 'Resource/Tex'
+	DB	'ture/Maps/chapter1/chapter1-1-2.png', 00H	; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_1BM@CBBODJAA@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAF?$AAr?$AAo?$AAn?$AAt?$AA?$AA@
 CONST	SEGMENT
@@ -700,20 +712,20 @@ CONST	SEGMENT
 	DB	'g', 00H, 'F', 00H, 'r', 00H, 'o', 00H, 'n', 00H, 't', 00H, 00H
 	DB	00H						; `string'
 CONST	ENDS
-;	COMDAT ??_C@_0CD@GJNGJMKA@Resource?1Texture?1Maps?1scene1?11?4p@
+;	COMDAT ??_C@_0DA@LNGGGNC@Resource?1Texture?1Maps?1chapter1?1c@
 CONST	SEGMENT
-??_C@_0CD@GJNGJMKA@Resource?1Texture?1Maps?1scene1?11?4p@ DB 'Resource/Te'
-	DB	'xture/Maps/scene1/1.png', 00H		; `string'
+??_C@_0DA@LNGGGNC@Resource?1Texture?1Maps?1chapter1?1c@ DB 'Resource/Text'
+	DB	'ure/Maps/chapter1/chapter1-1-1.png', 00H	; `string'
 CONST	ENDS
-;	COMDAT ??_C@_1O@LPGDINIK@?$AAA?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@
+;	COMDAT ??_C@_1M@ODGMBGCH@?$AAR?$AAo?$AAl?$AAe?$AA1?$AA?$AA@
 CONST	SEGMENT
-??_C@_1O@LPGDINIK@?$AAA?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@ DB 'A', 00H, 'c'
-	DB	00H, 't', 00H, 'i', 00H, 'o', 00H, 'n', 00H, 00H, 00H ; `string'
+??_C@_1M@ODGMBGCH@?$AAR?$AAo?$AAl?$AAe?$AA1?$AA?$AA@ DB 'R', 00H, 'o', 00H
+	DB	'l', 00H, 'e', 00H, '1', 00H, 00H, 00H	; `string'
 CONST	ENDS
-;	COMDAT ??_C@_0BM@LBNNLKEF@Resource?1Texture?1Action?4png?$AA@
+;	COMDAT ??_C@_0CB@EOAMNKL@Resource?1Texture?1Role?1role_1?4png@
 CONST	SEGMENT
-??_C@_0BM@LBNNLKEF@Resource?1Texture?1Action?4png?$AA@ DB 'Resource/Textu'
-	DB	're/Action.png', 00H				; `string'
+??_C@_0CB@EOAMNKL@Resource?1Texture?1Role?1role_1?4png@ DB 'Resource/Text'
+	DB	'ure/Role/role_1.png', 00H			; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_15KGOJFLP@?$AAB?$AAG?$AA?$AA@
 CONST	SEGMENT
@@ -755,36 +767,44 @@ _this$ = -8						; size = 4
 ; Line 52
 	push	0
 	push	0
-	push	OFFSET ??_C@_0BM@LBNNLKEF@Resource?1Texture?1Action?4png?$AA@
-	push	OFFSET ??_C@_1O@LPGDINIK@?$AAA?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@
-	mov	eax, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR [eax+8]
-	call	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z ; CResourceManager::LoadTexture
-; Line 53
-	push	0
-	push	0
-	push	OFFSET ??_C@_0CD@GJNGJMKA@Resource?1Texture?1Maps?1scene1?11?4p@
-	push	OFFSET ??_C@_1BM@CBBODJAA@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAF?$AAr?$AAo?$AAn?$AAt?$AA?$AA@
+	push	OFFSET ??_C@_0CB@EOAMNKL@Resource?1Texture?1Role?1role_1?4png@
+	push	OFFSET ??_C@_1M@ODGMBGCH@?$AAR?$AAo?$AAl?$AAe?$AA1?$AA?$AA@
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
 	call	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z ; CResourceManager::LoadTexture
 ; Line 54
 	push	0
 	push	0
-	push	OFFSET ??_C@_0CD@OPECOOAO@Resource?1Texture?1Maps?1scene1?12?4p@
-	push	OFFSET ??_C@_1BO@OHOKLLPB@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAM?$AAi?$AAd?$AAd?$AAl?$AAe?$AA?$AA@
+	push	OFFSET ??_C@_0DA@LNGGGNC@Resource?1Texture?1Maps?1chapter1?1c@
+	push	OFFSET ??_C@_1BM@CBBODJAA@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAF?$AAr?$AAo?$AAn?$AAt?$AA?$AA@
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
 	call	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z ; CResourceManager::LoadTexture
 ; Line 55
 	push	0
 	push	0
-	push	OFFSET ??_C@_0CD@CEBODNKL@Resource?1Texture?1Maps?1scene1?13?4p@
-	push	OFFSET ??_C@_1BK@DHGJHBGH@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAB?$AAa?$AAc?$AAk?$AA?$AA@
+	push	OFFSET ??_C@_0DA@INECBEHM@Resource?1Texture?1Maps?1chapter1?1c@
+	push	OFFSET ??_C@_1BO@OHOKLLPB@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAM?$AAi?$AAd?$AAd?$AAl?$AAe?$AA?$AA@
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
 	call	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z ; CResourceManager::LoadTexture
 ; Line 56
+	push	0
+	push	0
+	push	OFFSET ??_C@_0DA@EGBOMHNJ@Resource?1Texture?1Maps?1chapter1?1c@
+	push	OFFSET ??_C@_1BK@DHGJHBGH@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAB?$AAa?$AAc?$AAk?$AA?$AA@
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+8]
+	call	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z ; CResourceManager::LoadTexture
+; Line 58
+	push	0
+	push	0
+	push	OFFSET ??_C@_0DF@GEHALMDL@Resource?1Texture?1Maps?1chapter1?1c@
+	push	OFFSET ??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+8]
+	call	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z ; CResourceManager::LoadTexture
+; Line 59
 	pop	edi
 	pop	esi
 	pop	ebx

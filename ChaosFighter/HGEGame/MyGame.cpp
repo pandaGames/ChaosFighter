@@ -49,8 +49,11 @@ void CMyGame::InitTextures()
 {
 	//¼ÓÔØ×ÊÔ´
 	m_pResManager->LoadTexture(L"BG","Resource/Texture/bg.png");
-	m_pResManager->LoadTexture(L"Action","Resource/Texture/Action.png");
-	m_pResManager->LoadTexture(L"Scene1BgFront", "Resource/Texture/Maps/scene1/1.png");
-	m_pResManager->LoadTexture(L"Scene1BgMiddle", "Resource/Texture/Maps/scene1/2.png");
-	m_pResManager->LoadTexture(L"Scene1BgBack", "Resource/Texture/Maps/scene1/3.png");
+	m_pResManager->LoadTexture(L"Role1","Resource/Texture/Role/role_1.png");
+	//chapter1 maps
+	m_pResManager->LoadTexture(L"Scene1BgFront", "Resource/Texture/Maps/chapter1/chapter1-1-1.png");
+	m_pResManager->LoadTexture(L"Scene1BgMiddle", "Resource/Texture/Maps/chapter1/chapter1-1-2.png");
+	m_pResManager->LoadTexture(L"Scene1BgBack", "Resource/Texture/Maps/chapter1/chapter1-1-3.png");
+	//chapter1 components
+	m_pResManager->LoadTexture(L"Flag_1", "Resource/Texture/Maps/chapter1/components/flag_1.png");
 }

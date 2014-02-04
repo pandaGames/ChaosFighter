@@ -159,13 +159,20 @@ $LN3@vector:
 ??_H@YGXPAXIHP6EPAX0@Z@Z ENDP				; `vector constructor iterator'
 _TEXT	ENDS
 PUBLIC	??_C@_0BI@JGKBEFBP@Resource?1Font?1font1?4fnt?$AA@ ; `string'
+PUBLIC	__real@3e99999a
+PUBLIC	__real@442f0000
+PUBLIC	__real@42c80000
+PUBLIC	??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@ ; `string'
+PUBLIC	__real@40c00000
+PUBLIC	__real@43540000
+PUBLIC	__real@43fa0000
 PUBLIC	??_C@_1BM@CBBODJAA@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAF?$AAr?$AAo?$AAn?$AAt?$AA?$AA@ ; `string'
 PUBLIC	??_C@_1BO@OHOKLLPB@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAM?$AAi?$AAd?$AAd?$AAl?$AAe?$AA?$AA@ ; `string'
 PUBLIC	??0D3DXVECTOR3@@QAE@MMM@Z			; D3DXVECTOR3::D3DXVECTOR3
 PUBLIC	??_C@_1BK@DHGJHBGH@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAB?$AAa?$AAc?$AAk?$AA?$AA@ ; `string'
 PUBLIC	__real@00000000
-PUBLIC	__real@44fa0000
-PUBLIC	__real@44228000
+PUBLIC	__real@44b86000
+PUBLIC	__real@43f00000
 PUBLIC	??_7CMission@@6B@				; CMission::`vftable'
 PUBLIC	__$ArrayPad$
 PUBLIC	??0CMission@@QAE@PAVCGame@@@Z			; CMission::CMission
@@ -185,6 +192,8 @@ EXTRN	??1CScreen@@UAE@XZ:PROC				; CScreen::~CScreen
 EXTRN	??0hgeFont@@QAE@PBD_N@Z:PROC			; hgeFont::hgeFont
 EXTRN	??0CPlayer@@QAE@PAVCGame@@PAVCSpriteManager@@@Z:PROC ; CPlayer::CPlayer
 EXTRN	??2@YAPAXI@Z:PROC				; operator new
+EXTRN	?SetScale@CSprite@@QAEXM@Z:PROC			; CSprite::SetScale
+EXTRN	?CreateAnimSprite@CSpriteManager@@QAEPAVCAnimSprite@@UD3DXVECTOR3@@QA_WHMMMMM_N@Z:PROC ; CSpriteManager::CreateAnimSprite
 EXTRN	?CreateSprite@CSpriteManager@@QAEPAVCSprite@@UD3DXVECTOR3@@QA_WMMMM@Z:PROC ; CSpriteManager::CreateSprite
 EXTRN	??0CScreen@@QAE@PAVCGame@@@Z:PROC		; CScreen::CScreen
 EXTRN	___security_cookie:DWORD
@@ -262,6 +271,35 @@ CONST	SEGMENT
 ??_C@_0BI@JGKBEFBP@Resource?1Font?1font1?4fnt?$AA@ DB 'Resource/Font/font'
 	DB	'1.fnt', 00H					; `string'
 CONST	ENDS
+;	COMDAT __real@3e99999a
+CONST	SEGMENT
+__real@3e99999a DD 03e99999ar			; 0.3
+CONST	ENDS
+;	COMDAT __real@442f0000
+CONST	SEGMENT
+__real@442f0000 DD 0442f0000r			; 700
+CONST	ENDS
+;	COMDAT __real@42c80000
+CONST	SEGMENT
+__real@42c80000 DD 042c80000r			; 100
+CONST	ENDS
+;	COMDAT ??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@
+CONST	SEGMENT
+??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@ DB 'F', 00H, 'l'
+	DB	00H, 'a', 00H, 'g', 00H, '_', 00H, '1', 00H, 00H, 00H ; `string'
+CONST	ENDS
+;	COMDAT __real@40c00000
+CONST	SEGMENT
+__real@40c00000 DD 040c00000r			; 6
+CONST	ENDS
+;	COMDAT __real@43540000
+CONST	SEGMENT
+__real@43540000 DD 043540000r			; 212
+CONST	ENDS
+;	COMDAT __real@43fa0000
+CONST	SEGMENT
+__real@43fa0000 DD 043fa0000r			; 500
+CONST	ENDS
 ;	COMDAT ??_C@_1BM@CBBODJAA@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAF?$AAr?$AAo?$AAn?$AAt?$AA?$AA@
 CONST	SEGMENT
 ??_C@_1BM@CBBODJAA@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAF?$AAr?$AAo?$AAn?$AAt?$AA?$AA@ DB 'S'
@@ -286,13 +324,13 @@ CONST	ENDS
 CONST	SEGMENT
 __real@00000000 DD 000000000r			; 0
 CONST	ENDS
-;	COMDAT __real@44fa0000
+;	COMDAT __real@44b86000
 CONST	SEGMENT
-__real@44fa0000 DD 044fa0000r			; 2000
+__real@44b86000 DD 044b86000r			; 1475
 CONST	ENDS
-;	COMDAT __real@44228000
+;	COMDAT __real@43f00000
 CONST	SEGMENT
-__real@44228000 DD 044228000r			; 650
+__real@43f00000 DD 043f00000r			; 480
 CONST	ENDS
 ;	COMDAT ??_7CMission@@6B@
 CONST	SEGMENT
@@ -320,15 +358,16 @@ __ehfuncinfo$??0CMission@@QAE@PAVCGame@@@Z DD 019930522H
 xdata$x	ENDS
 ;	COMDAT ??0CMission@@QAE@PAVCGame@@@Z
 _TEXT	SEGMENT
-tv200 = -332						; size = 4
-tv190 = -332						; size = 4
-$T105805 = -324						; size = 4
-$T105806 = -312						; size = 4
-$T105809 = -300						; size = 4
-$T105810 = -288						; size = 4
-$T104811 = -276						; size = 12
-$T104813 = -256						; size = 12
-$T104815 = -236						; size = 12
+tv229 = -352						; size = 4
+tv219 = -352						; size = 4
+$T105811 = -344						; size = 4
+$T105812 = -332						; size = 4
+$T105815 = -320						; size = 4
+$T105816 = -308						; size = 4
+$T104812 = -296						; size = 12
+$T104814 = -276						; size = 12
+$T104816 = -256						; size = 12
+$T104818 = -236						; size = 12
 _this$ = -24						; size = 4
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
@@ -342,13 +381,13 @@ _pGame$ = 8						; size = 4
 	push	__ehhandler$??0CMission@@QAE@PAVCGame@@@Z
 	mov	eax, DWORD PTR fs:0
 	push	eax
-	sub	esp, 320				; 00000140H
+	sub	esp, 340				; 00000154H
 	push	ebx
 	push	esi
 	push	edi
 	push	ecx
-	lea	edi, DWORD PTR [ebp-332]
-	mov	ecx, 80					; 00000050H
+	lea	edi, DWORD PTR [ebp-352]
+	mov	ecx, 85					; 00000055H
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	pop	ecx
@@ -368,10 +407,10 @@ _pGame$ = 8						; size = 4
 	mov	DWORD PTR [eax], OFFSET ??_7CMission@@6B@
 ; Line 6
 	push	ecx
-	fld	DWORD PTR __real@44228000
+	fld	DWORD PTR __real@43f00000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fld	DWORD PTR __real@44fa0000
+	fld	DWORD PTR __real@44b86000
 	fstp	DWORD PTR [esp]
 	push	ecx
 	fldz
@@ -389,7 +428,7 @@ _pGame$ = 8						; size = 4
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104811[ebp]
+	lea	ecx, DWORD PTR $T104812[ebp]
 	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
@@ -406,10 +445,10 @@ _pGame$ = 8						; size = 4
 	mov	DWORD PTR [edx+32], eax
 ; Line 7
 	push	ecx
-	fld	DWORD PTR __real@44228000
+	fld	DWORD PTR __real@43f00000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fld	DWORD PTR __real@44fa0000
+	fld	DWORD PTR __real@44b86000
 	fstp	DWORD PTR [esp]
 	push	ecx
 	fldz
@@ -427,7 +466,7 @@ _pGame$ = 8						; size = 4
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104813[ebp]
+	lea	ecx, DWORD PTR $T104814[ebp]
 	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
@@ -444,10 +483,10 @@ _pGame$ = 8						; size = 4
 	mov	DWORD PTR [edx+28], eax
 ; Line 8
 	push	ecx
-	fld	DWORD PTR __real@44228000
+	fld	DWORD PTR __real@43f00000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fld	DWORD PTR __real@44fa0000
+	fld	DWORD PTR __real@44b86000
 	fstp	DWORD PTR [esp]
 	push	ecx
 	fldz
@@ -465,7 +504,7 @@ _pGame$ = 8						; size = 4
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104815[ebp]
+	lea	ecx, DWORD PTR $T104816[ebp]
 	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
@@ -481,12 +520,62 @@ _pGame$ = 8						; size = 4
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [edx+24], eax
 ; Line 10
+	push	1
+	push	ecx
+	fld	DWORD PTR __real@43fa0000
+	fstp	DWORD PTR [esp]
+	push	ecx
+	fld	DWORD PTR __real@43540000
+	fstp	DWORD PTR [esp]
+	push	ecx
+	fldz
+	fstp	DWORD PTR [esp]
+	push	ecx
+	fldz
+	fstp	DWORD PTR [esp]
+	push	ecx
+	fld	DWORD PTR __real@40c00000
+	fstp	DWORD PTR [esp]
+	push	4
+	push	OFFSET ??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@
+	push	ecx
+	fldz
+	fstp	DWORD PTR [esp]
+	push	ecx
+	fld	DWORD PTR __real@42c80000
+	fstp	DWORD PTR [esp]
+	push	ecx
+	fld	DWORD PTR __real@442f0000
+	fstp	DWORD PTR [esp]
+	lea	ecx, DWORD PTR $T104818[ebp]
+	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
+	sub	esp, 12					; 0000000cH
+	mov	ecx, esp
+	mov	edx, DWORD PTR [eax]
+	mov	DWORD PTR [ecx], edx
+	mov	edx, DWORD PTR [eax+4]
+	mov	DWORD PTR [ecx+4], edx
+	mov	eax, DWORD PTR [eax+8]
+	mov	DWORD PTR [ecx+8], eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+12]
+	call	?CreateAnimSprite@CSpriteManager@@QAEPAVCAnimSprite@@UD3DXVECTOR3@@QA_WHMMMMM_N@Z ; CSpriteManager::CreateAnimSprite
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [edx+36], eax
+; Line 11
+	push	ecx
+	fld	DWORD PTR __real@3e99999a
+	fstp	DWORD PTR [esp]
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+36]
+	call	?SetScale@CSprite@@QAEXM@Z		; CSprite::SetScale
+; Line 13
 	push	20					; 00000014H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T105806[ebp], eax
+	mov	DWORD PTR $T105812[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
-	cmp	DWORD PTR $T105806[ebp], 0
+	cmp	DWORD PTR $T105812[ebp], 0
 	je	SHORT $LN3@CMission
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+12]
@@ -494,43 +583,43 @@ _pGame$ = 8						; size = 4
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+4]
 	push	eax
-	mov	ecx, DWORD PTR $T105806[ebp]
+	mov	ecx, DWORD PTR $T105812[ebp]
 	call	??0CPlayer@@QAE@PAVCGame@@PAVCSpriteManager@@@Z ; CPlayer::CPlayer
-	mov	DWORD PTR tv190[ebp], eax
+	mov	DWORD PTR tv219[ebp], eax
 	jmp	SHORT $LN4@CMission
 $LN3@CMission:
-	mov	DWORD PTR tv190[ebp], 0
+	mov	DWORD PTR tv219[ebp], 0
 $LN4@CMission:
-	mov	ecx, DWORD PTR tv190[ebp]
-	mov	DWORD PTR $T105805[ebp], ecx
+	mov	ecx, DWORD PTR tv219[ebp]
+	mov	DWORD PTR $T105811[ebp], ecx
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR $T105805[ebp]
+	mov	eax, DWORD PTR $T105811[ebp]
 	mov	DWORD PTR [edx+16], eax
-; Line 11
+; Line 14
 	push	3112					; 00000c28H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T105810[ebp], eax
+	mov	DWORD PTR $T105816[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
-	cmp	DWORD PTR $T105810[ebp], 0
+	cmp	DWORD PTR $T105816[ebp], 0
 	je	SHORT $LN5@CMission
 	push	0
 	push	OFFSET ??_C@_0BI@JGKBEFBP@Resource?1Font?1font1?4fnt?$AA@
-	mov	ecx, DWORD PTR $T105810[ebp]
+	mov	ecx, DWORD PTR $T105816[ebp]
 	call	??0hgeFont@@QAE@PBD_N@Z			; hgeFont::hgeFont
-	mov	DWORD PTR tv200[ebp], eax
+	mov	DWORD PTR tv229[ebp], eax
 	jmp	SHORT $LN6@CMission
 $LN5@CMission:
-	mov	DWORD PTR tv200[ebp], 0
+	mov	DWORD PTR tv229[ebp], 0
 $LN6@CMission:
-	mov	eax, DWORD PTR tv200[ebp]
-	mov	DWORD PTR $T105809[ebp], eax
+	mov	eax, DWORD PTR tv229[ebp]
+	mov	DWORD PTR $T105815[ebp], eax
 	mov	BYTE PTR __$EHRec$[ebp+8], 0
 	mov	ecx, DWORD PTR _this$[ebp]
-	mov	edx, DWORD PTR $T105809[ebp]
+	mov	edx, DWORD PTR $T105815[ebp]
 	mov	DWORD PTR [ecx+20], edx
-; Line 12
+; Line 15
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
@@ -542,7 +631,7 @@ $LN6@CMission:
 	mov	ecx, DWORD PTR __$ArrayPad$[ebp]
 	xor	ecx, ebp
 	call	@__security_check_cookie@4
-	add	esp, 332				; 0000014cH
+	add	esp, 352				; 00000160H
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
 	mov	esp, ebp
@@ -555,13 +644,13 @@ __unwindfunclet$??0CMission@@QAE@PAVCGame@@@Z$0:
 	mov	ecx, DWORD PTR _this$[ebp]
 	jmp	??1CScreen@@UAE@XZ			; CScreen::~CScreen
 __unwindfunclet$??0CMission@@QAE@PAVCGame@@@Z$1:
-	mov	eax, DWORD PTR $T105806[ebp]
+	mov	eax, DWORD PTR $T105812[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
 __unwindfunclet$??0CMission@@QAE@PAVCGame@@@Z$2:
-	mov	eax, DWORD PTR $T105810[ebp]
+	mov	eax, DWORD PTR $T105816[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -569,7 +658,7 @@ __unwindfunclet$??0CMission@@QAE@PAVCGame@@@Z$2:
 __ehhandler$??0CMission@@QAE@PAVCGame@@@Z:
 	mov	edx, DWORD PTR [esp+8]
 	lea	eax, DWORD PTR [edx+12]
-	mov	ecx, DWORD PTR [edx-336]
+	mov	ecx, DWORD PTR [edx-356]
 	xor	ecx, eax
 	call	@__security_check_cookie@4
 	mov	ecx, DWORD PTR [edx-4]
@@ -688,15 +777,15 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv90 = -268						; size = 4
 tv81 = -268						; size = 4
-$T105840 = -260						; size = 4
-$T105841 = -248						; size = 4
-$T105844 = -236						; size = 4
-$T105845 = -224						; size = 4
+$T105858 = -260						; size = 4
+$T105859 = -248						; size = 4
+$T105862 = -236						; size = 4
+$T105863 = -224						; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -12						; size = 12
 ??1CMission@@UAE@XZ PROC				; CMission::~CMission, COMDAT
 ; _this$ = ecx
-; Line 15
+; Line 18
 	push	ebp
 	mov	ebp, esp
 	push	-1
@@ -722,19 +811,19 @@ __$EHRec$ = -12						; size = 12
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax], OFFSET ??_7CMission@@6B@
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-; Line 16
+; Line 19
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+16], 0
 	je	SHORT $LN2@CMission@2
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+16]
-	mov	DWORD PTR $T105841[ebp], ecx
-	mov	edx, DWORD PTR $T105841[ebp]
-	mov	DWORD PTR $T105840[ebp], edx
-	cmp	DWORD PTR $T105840[ebp], 0
+	mov	DWORD PTR $T105859[ebp], ecx
+	mov	edx, DWORD PTR $T105859[ebp]
+	mov	DWORD PTR $T105858[ebp], edx
+	cmp	DWORD PTR $T105858[ebp], 0
 	je	SHORT $LN5@CMission@2
 	push	1
-	mov	ecx, DWORD PTR $T105840[ebp]
+	mov	ecx, DWORD PTR $T105858[ebp]
 	call	??_GCPlayer@@QAEPAXI@Z
 	mov	DWORD PTR tv81[ebp], eax
 	jmp	SHORT $LN2@CMission@2
@@ -743,19 +832,19 @@ $LN5@CMission@2:
 $LN2@CMission@2:
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+16], 0
-; Line 17
+; Line 20
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+20], 0
 	je	SHORT $LN1@CMission@2
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+20]
-	mov	DWORD PTR $T105845[ebp], ecx
-	mov	edx, DWORD PTR $T105845[ebp]
-	mov	DWORD PTR $T105844[ebp], edx
-	cmp	DWORD PTR $T105844[ebp], 0
+	mov	DWORD PTR $T105863[ebp], ecx
+	mov	edx, DWORD PTR $T105863[ebp]
+	mov	DWORD PTR $T105862[ebp], edx
+	cmp	DWORD PTR $T105862[ebp], 0
 	je	SHORT $LN7@CMission@2
 	push	1
-	mov	ecx, DWORD PTR $T105844[ebp]
+	mov	ecx, DWORD PTR $T105862[ebp]
 	call	??_GhgeFont@@QAEPAXI@Z
 	mov	DWORD PTR tv90[ebp], eax
 	jmp	SHORT $LN1@CMission@2
@@ -764,7 +853,7 @@ $LN7@CMission@2:
 $LN1@CMission@2:
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+20], 0
-; Line 18
+; Line 21
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??1CScreen@@UAE@XZ			; CScreen::~CScreen
@@ -882,17 +971,21 @@ $LN1@scalar@3:
 	ret	4
 ??_GhgeFont@@QAEPAXI@Z ENDP				; hgeFont::`scalar deleting destructor'
 _TEXT	ENDS
+PUBLIC	__real@4085e00000000000
 PUBLIC	__real@3ff0000000000000
 PUBLIC	__real@3fe0000000000000
 PUBLIC	__real@3fe6666666666666
-PUBLIC	__real@4069000000000000
+PUBLIC	__real@4088100000000000
 PUBLIC	__$ArrayPad$
 EXTRN	?SetPos@CSprite@@QAEXUD3DXVECTOR3@@@Z:PROC	; CSprite::SetPos
 EXTRN	?GetPos@CSprite@@QAE?AUD3DXVECTOR3@@XZ:PROC	; CSprite::GetPos
 EXTRN	?GetPos@CPlayer@@QAE?AUD3DXVECTOR3@@XZ:PROC	; CPlayer::GetPos
 EXTRN	?Control@CPlayer@@QAEXXZ:PROC			; CPlayer::Control
 EXTRN	?Update@CScreen@@UAEXM@Z:PROC			; CScreen::Update
-EXTRN	@_RTC_CheckStackVars@8:PROC
+;	COMDAT __real@4085e00000000000
+CONST	SEGMENT
+__real@4085e00000000000 DQ 04085e00000000000r	; 700
+CONST	ENDS
 ;	COMDAT __real@3ff0000000000000
 CONST	SEGMENT
 __real@3ff0000000000000 DQ 03ff0000000000000r	; 1
@@ -905,36 +998,41 @@ CONST	ENDS
 CONST	SEGMENT
 __real@3fe6666666666666 DQ 03fe6666666666666r	; 0.7
 CONST	ENDS
-;	COMDAT __real@4069000000000000
+;	COMDAT __real@4088100000000000
 CONST	SEGMENT
-__real@4069000000000000 DQ 04069000000000000r	; 200
+__real@4088100000000000 DQ 04088100000000000r	; 770
 ; Function compile flags: /Odtp /RTCsu /ZI
 CONST	ENDS
 ;	COMDAT ?Update@CMission@@UAEXM@Z
 _TEXT	SEGMENT
-tv222 = -332						; size = 4
-tv199 = -332						; size = 4
-$T104852 = -324						; size = 12
-$T104856 = -304						; size = 12
-$T104857 = -284						; size = 12
-$T104858 = -264						; size = 12
-$T104859 = -244						; size = 12
-_pos$104854 = -32					; size = 12
+tv280 = -392						; size = 4
+tv257 = -392						; size = 4
+tv234 = -392						; size = 4
+tv211 = -392						; size = 4
+$T104855 = -384						; size = 12
+$T104857 = -364						; size = 12
+$T104858 = -344						; size = 12
+$T104859 = -324						; size = 12
+$T104860 = -304						; size = 12
+$T104861 = -284						; size = 12
+$T104862 = -264						; size = 12
+$T104863 = -244						; size = 12
+$T104864 = -224						; size = 12
 _this$ = -12						; size = 4
 __$ArrayPad$ = -4					; size = 4
 _fDeltaTime$ = 8					; size = 4
 ?Update@CMission@@UAEXM@Z PROC				; CMission::Update, COMDAT
 ; _this$ = ecx
-; Line 21
+; Line 24
 	push	ebp
 	mov	ebp, esp
-	sub	esp, 332				; 0000014cH
+	sub	esp, 392				; 00000188H
 	push	ebx
 	push	esi
 	push	edi
 	push	ecx
-	lea	edi, DWORD PTR [ebp-332]
-	mov	ecx, 83					; 00000053H
+	lea	edi, DWORD PTR [ebp-392]
+	mov	ecx, 98					; 00000062H
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	pop	ecx
@@ -942,48 +1040,57 @@ _fDeltaTime$ = 8					; size = 4
 	xor	eax, ebp
 	mov	DWORD PTR __$ArrayPad$[ebp], eax
 	mov	DWORD PTR _this$[ebp], ecx
-; Line 22
+; Line 25
 	push	ecx
 	fld	DWORD PTR _fDeltaTime$[ebp]
 	fstp	DWORD PTR [esp]
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?Update@CScreen@@UAEXM@Z		; CScreen::Update
-; Line 24
+; Line 27
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+16]
 	call	?Control@CPlayer@@QAEXXZ		; CPlayer::Control
-; Line 26
-	lea	eax, DWORD PTR $T104852[ebp]
+; Line 29
+	lea	eax, DWORD PTR $T104855[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+16]
 	call	?GetPos@CPlayer@@QAE?AUD3DXVECTOR3@@XZ	; CPlayer::GetPos
 	fld	DWORD PTR [eax]
-	fcomp	QWORD PTR __real@4069000000000000
+	fcomp	QWORD PTR __real@4088100000000000
 	fnstsw	ax
 	test	ah, 1
 	jne	$LN1@Update
-; Line 28
-	lea	eax, DWORD PTR _pos$104854[ebp]
+; Line 31
+	push	ecx
+	fldz
+	fstp	DWORD PTR [esp]
+	push	ecx
+	fldz
+	fstp	DWORD PTR [esp]
+	lea	eax, DWORD PTR $T104857[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+28]
 	call	?GetPos@CSprite@@QAE?AUD3DXVECTOR3@@XZ	; CSprite::GetPos
-; Line 29
-	fld	DWORD PTR _pos$104854[ebp]
+	fld	DWORD PTR [eax]
 	fsub	QWORD PTR __real@3fe6666666666666
-	fstp	DWORD PTR _pos$104854[ebp]
-; Line 30
+	fstp	DWORD PTR tv211[ebp]
+	fld	DWORD PTR tv211[ebp]
+	push	ecx
+	fstp	DWORD PTR [esp]
+	lea	ecx, DWORD PTR $T104858[ebp]
+	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
-	mov	eax, esp
-	mov	ecx, DWORD PTR _pos$104854[ebp]
-	mov	DWORD PTR [eax], ecx
-	mov	edx, DWORD PTR _pos$104854[ebp+4]
-	mov	DWORD PTR [eax+4], edx
-	mov	ecx, DWORD PTR _pos$104854[ebp+8]
-	mov	DWORD PTR [eax+8], ecx
-	mov	edx, DWORD PTR _this$[ebp]
-	mov	ecx, DWORD PTR [edx+28]
+	mov	edx, esp
+	mov	ecx, DWORD PTR [eax]
+	mov	DWORD PTR [edx], ecx
+	mov	ecx, DWORD PTR [eax+4]
+	mov	DWORD PTR [edx+4], ecx
+	mov	eax, DWORD PTR [eax+8]
+	mov	DWORD PTR [edx+8], eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+28]
 	call	?SetPos@CSprite@@QAEXUD3DXVECTOR3@@@Z	; CSprite::SetPos
 ; Line 32
 	push	ecx
@@ -992,18 +1099,18 @@ _fDeltaTime$ = 8					; size = 4
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
-	lea	eax, DWORD PTR $T104856[ebp]
+	lea	eax, DWORD PTR $T104859[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+32]
 	call	?GetPos@CSprite@@QAE?AUD3DXVECTOR3@@XZ	; CSprite::GetPos
 	fld	DWORD PTR [eax]
 	fsub	QWORD PTR __real@3fe0000000000000
-	fstp	DWORD PTR tv199[ebp]
-	fld	DWORD PTR tv199[ebp]
+	fstp	DWORD PTR tv234[ebp]
+	fld	DWORD PTR tv234[ebp]
 	push	ecx
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104857[ebp]
+	lea	ecx, DWORD PTR $T104860[ebp]
 	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
 	mov	edx, esp
@@ -1016,25 +1123,25 @@ _fDeltaTime$ = 8					; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+32]
 	call	?SetPos@CSprite@@QAEXUD3DXVECTOR3@@@Z	; CSprite::SetPos
-; Line 34
+; Line 33
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
-	lea	eax, DWORD PTR $T104858[ebp]
+	lea	eax, DWORD PTR $T104861[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+24]
 	call	?GetPos@CSprite@@QAE?AUD3DXVECTOR3@@XZ	; CSprite::GetPos
 	fld	DWORD PTR [eax]
 	fsub	QWORD PTR __real@3ff0000000000000
-	fstp	DWORD PTR tv222[ebp]
-	fld	DWORD PTR tv222[ebp]
+	fstp	DWORD PTR tv257[ebp]
+	fld	DWORD PTR tv257[ebp]
 	push	ecx
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104859[ebp]
+	lea	ecx, DWORD PTR $T104862[ebp]
 	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
 	mov	edx, esp
@@ -1047,40 +1154,51 @@ _fDeltaTime$ = 8					; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+24]
 	call	?SetPos@CSprite@@QAEXUD3DXVECTOR3@@@Z	; CSprite::SetPos
+; Line 34
+	push	ecx
+	fldz
+	fstp	DWORD PTR [esp]
+	push	ecx
+	fld	DWORD PTR __real@42c80000
+	fstp	DWORD PTR [esp]
+	lea	eax, DWORD PTR $T104863[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+24]
+	call	?GetPos@CSprite@@QAE?AUD3DXVECTOR3@@XZ	; CSprite::GetPos
+	fld	DWORD PTR [eax]
+	fadd	QWORD PTR __real@4085e00000000000
+	fstp	DWORD PTR tv280[ebp]
+	fld	DWORD PTR tv280[ebp]
+	push	ecx
+	fstp	DWORD PTR [esp]
+	lea	ecx, DWORD PTR $T104864[ebp]
+	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
+	sub	esp, 12					; 0000000cH
+	mov	edx, esp
+	mov	ecx, DWORD PTR [eax]
+	mov	DWORD PTR [edx], ecx
+	mov	ecx, DWORD PTR [eax+4]
+	mov	DWORD PTR [edx+4], ecx
+	mov	eax, DWORD PTR [eax+8]
+	mov	DWORD PTR [edx+8], eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+36]
+	call	?SetPos@CSprite@@QAEXUD3DXVECTOR3@@@Z	; CSprite::SetPos
 $LN1@Update:
 ; Line 37
-	push	edx
-	mov	ecx, ebp
-	push	eax
-	lea	edx, DWORD PTR $LN6@Update
-	call	@_RTC_CheckStackVars@8
-	pop	eax
-	pop	edx
 	pop	edi
 	pop	esi
 	pop	ebx
 	mov	ecx, DWORD PTR __$ArrayPad$[ebp]
 	xor	ecx, ebp
 	call	@__security_check_cookie@4
-	add	esp, 332				; 0000014cH
+	add	esp, 392				; 00000188H
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
 	mov	esp, ebp
 	pop	ebp
 	ret	4
-	npad	1
-$LN6@Update:
-	DD	1
-	DD	$LN5@Update
-$LN5@Update:
-	DD	-32					; ffffffe0H
-	DD	12					; 0000000cH
-	DD	$LN4@Update
-$LN4@Update:
-	DB	112					; 00000070H
-	DB	111					; 0000006fH
-	DB	115					; 00000073H
-	DB	0
 ?Update@CMission@@UAEXM@Z ENDP				; CMission::Update
 _TEXT	ENDS
 PUBLIC	__real@40a00000
@@ -1099,7 +1217,7 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT ?Render@CMission@@UAEXXZ
 _TEXT	SEGMENT
-$T104863 = -224						; size = 12
+$T104868 = -224						; size = 12
 _this$ = -12						; size = 4
 __$ArrayPad$ = -4					; size = 4
 ?Render@CMission@@UAEXXZ PROC				; CMission::Render, COMDAT
@@ -1125,7 +1243,7 @@ __$ArrayPad$ = -4					; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?Render@CScreen@@UAEXXZ			; CScreen::Render
 ; Line 41
-	lea	eax, DWORD PTR $T104863[ebp]
+	lea	eax, DWORD PTR $T104868[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+16]

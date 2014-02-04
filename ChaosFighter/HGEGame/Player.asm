@@ -166,10 +166,13 @@ PUBLIC	__real@3f800000
 PUBLIC	__real@41f00000
 PUBLIC	__real@42700000
 PUBLIC	??0D3DXVECTOR3@@QAE@MMM@Z			; D3DXVECTOR3::D3DXVECTOR3
-PUBLIC	??_C@_1O@LPGDINIK@?$AAA?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@ ; `string'
-PUBLIC	__real@40e00000
 PUBLIC	__real@00000000
-PUBLIC	__real@42b40000
+PUBLIC	??_C@_1M@ODGMBGCH@?$AAR?$AAo?$AAl?$AAe?$AA1?$AA?$AA@ ; `string'
+PUBLIC	__real@40c00000
+PUBLIC	__real@41a00000
+PUBLIC	__real@44050000
+PUBLIC	__real@42580000
+PUBLIC	__real@42a80000
 PUBLIC	__$ArrayPad$
 PUBLIC	??0CPlayer@@QAE@PAVCGame@@PAVCSpriteManager@@@Z	; CPlayer::CPlayer
 EXTRN	?CreateBody@CGame@@QAEPAVb2Body@@UD3DXVECTOR3@@MM_NPAVCSprite@@MMM@Z:PROC ; CGame::CreateBody
@@ -203,22 +206,34 @@ CONST	ENDS
 CONST	SEGMENT
 __real@42700000 DD 042700000r			; 60
 CONST	ENDS
-;	COMDAT ??_C@_1O@LPGDINIK@?$AAA?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@
-CONST	SEGMENT
-??_C@_1O@LPGDINIK@?$AAA?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@ DB 'A', 00H, 'c'
-	DB	00H, 't', 00H, 'i', 00H, 'o', 00H, 'n', 00H, 00H, 00H ; `string'
-CONST	ENDS
-;	COMDAT __real@40e00000
-CONST	SEGMENT
-__real@40e00000 DD 040e00000r			; 7
-CONST	ENDS
 ;	COMDAT __real@00000000
 CONST	SEGMENT
 __real@00000000 DD 000000000r			; 0
 CONST	ENDS
-;	COMDAT __real@42b40000
+;	COMDAT ??_C@_1M@ODGMBGCH@?$AAR?$AAo?$AAl?$AAe?$AA1?$AA?$AA@
 CONST	SEGMENT
-__real@42b40000 DD 042b40000r			; 90
+??_C@_1M@ODGMBGCH@?$AAR?$AAo?$AAl?$AAe?$AA1?$AA?$AA@ DB 'R', 00H, 'o', 00H
+	DB	'l', 00H, 'e', 00H, '1', 00H, 00H, 00H	; `string'
+CONST	ENDS
+;	COMDAT __real@40c00000
+CONST	SEGMENT
+__real@40c00000 DD 040c00000r			; 6
+CONST	ENDS
+;	COMDAT __real@41a00000
+CONST	SEGMENT
+__real@41a00000 DD 041a00000r			; 20
+CONST	ENDS
+;	COMDAT __real@44050000
+CONST	SEGMENT
+__real@44050000 DD 044050000r			; 532
+CONST	ENDS
+;	COMDAT __real@42580000
+CONST	SEGMENT
+__real@42580000 DD 042580000r			; 54
+CONST	ENDS
+;	COMDAT __real@42a80000
+CONST	SEGMENT
+__real@42a80000 DD 042a80000r			; 84
 ; Function compile flags: /Odtp /RTCsu /ZI
 CONST	ENDS
 ;	COMDAT ??0CPlayer@@QAE@PAVCGame@@PAVCSpriteManager@@@Z
@@ -256,22 +271,22 @@ _pSprManager$ = 12					; size = 4
 ; Line 6
 	push	1
 	push	ecx
-	fld	DWORD PTR __real@42b40000
+	fld	DWORD PTR __real@42a80000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fld	DWORD PTR __real@42b40000
+	fld	DWORD PTR __real@42580000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fldz
+	fld	DWORD PTR __real@44050000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fldz
+	fld	DWORD PTR __real@41a00000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fld	DWORD PTR __real@40e00000
+	fld	DWORD PTR __real@40c00000
 	fstp	DWORD PTR [esp]
 	push	6
-	push	OFFSET ??_C@_1O@LPGDINIK@?$AAA?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?$AA@
+	push	OFFSET ??_C@_1M@ODGMBGCH@?$AAR?$AAo?$AAl?$AAe?$AA1?$AA?$AA@
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
@@ -527,14 +542,14 @@ _this$ = -8						; size = 4
 	ret	0
 ??1CPlayer@@QAE@XZ ENDP					; CPlayer::~CPlayer
 _TEXT	ENDS
+PUBLIC	__real@42640000
 PUBLIC	?SetSpeed@hgeAnimation@@QAEXM@Z			; hgeAnimation::SetSpeed
-PUBLIC	__real@41000000
 PUBLIC	?SetFrames@hgeAnimation@@QAEXH@Z		; hgeAnimation::SetFrames
 PUBLIC	?Stand@CPlayer@@QAEXXZ				; CPlayer::Stand
 EXTRN	?SetTextureRect@CAnimSprite@@QAEXMMMM@Z:PROC	; CAnimSprite::SetTextureRect
-;	COMDAT __real@41000000
+;	COMDAT __real@42640000
 CONST	SEGMENT
-__real@41000000 DD 041000000r			; 8
+__real@42640000 DD 042640000r			; 57
 ; Function compile flags: /Odtp /RTCsu /ZI
 CONST	ENDS
 ;	COMDAT ?Stand@CPlayer@@QAEXXZ
@@ -564,7 +579,7 @@ _this$ = -8						; size = 4
 	call	?SetFrames@hgeAnimation@@QAEXH@Z	; hgeAnimation::SetFrames
 ; Line 23
 	push	ecx
-	fld	DWORD PTR __real@41000000
+	fld	DWORD PTR __real@40c00000
 	fstp	DWORD PTR [esp]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
@@ -572,16 +587,16 @@ _this$ = -8						; size = 4
 	call	?SetSpeed@hgeAnimation@@QAEXM@Z		; hgeAnimation::SetSpeed
 ; Line 24
 	push	ecx
-	fld	DWORD PTR __real@42b40000
+	fld	DWORD PTR __real@42a80000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fld	DWORD PTR __real@42b40000
+	fld	DWORD PTR __real@42640000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fldz
+	fld	DWORD PTR __real@44050000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fldz
+	fld	DWORD PTR __real@41a00000
 	fstp	DWORD PTR [esp]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
@@ -673,12 +688,22 @@ _n$ = 8							; size = 4
 	ret	4
 ?SetFrames@hgeAnimation@@QAEXH@Z ENDP			; hgeAnimation::SetFrames
 _TEXT	ENDS
-PUBLIC	__real@41400000
+PUBLIC	__real@41900000
+PUBLIC	__real@441e4000
+PUBLIC	__real@42480000
 PUBLIC	?Run@CPlayer@@QAEXXZ				; CPlayer::Run
-;	COMDAT __real@41400000
+;	COMDAT __real@41900000
 ; File d:\mycodes\chaosfighter\trunk\chaosfighter\hgegame\player\player.cpp
 CONST	SEGMENT
-__real@41400000 DD 041400000r			; 12
+__real@41900000 DD 041900000r			; 18
+CONST	ENDS
+;	COMDAT __real@441e4000
+CONST	SEGMENT
+__real@441e4000 DD 0441e4000r			; 633
+CONST	ENDS
+;	COMDAT __real@42480000
+CONST	SEGMENT
+__real@42480000 DD 042480000r			; 50
 ; Function compile flags: /Odtp /RTCsu /ZI
 CONST	ENDS
 ;	COMDAT ?Run@CPlayer@@QAEXXZ
@@ -702,29 +727,29 @@ _this$ = -8						; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 ; Line 29
 	push	ecx
-	fld	DWORD PTR __real@42b40000
+	fld	DWORD PTR __real@42a80000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fld	DWORD PTR __real@42b40000
+	fld	DWORD PTR __real@42480000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fld	DWORD PTR __real@42b40000
+	fld	DWORD PTR __real@441e4000
 	fstp	DWORD PTR [esp]
 	push	ecx
-	fldz
+	fld	DWORD PTR __real@41900000
 	fstp	DWORD PTR [esp]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
 	call	?SetTextureRect@CAnimSprite@@QAEXMMMM@Z	; CAnimSprite::SetTextureRect
 ; Line 30
-	push	10					; 0000000aH
+	push	6
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
 	add	ecx, 212				; 000000d4H
 	call	?SetFrames@hgeAnimation@@QAEXH@Z	; hgeAnimation::SetFrames
 ; Line 31
 	push	ecx
-	fld	DWORD PTR __real@41400000
+	fld	DWORD PTR __real@40c00000
 	fstp	DWORD PTR [esp]
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax]
@@ -745,13 +770,23 @@ _this$ = -8						; size = 4
 	ret	0
 ?Run@CPlayer@@QAEXXZ ENDP				; CPlayer::Run
 _TEXT	ENDS
+PUBLIC	__real@41000000
 PUBLIC	__real@43340000
+PUBLIC	__real@42b40000
 PUBLIC	?GetFrame@hgeAnimation@@QBEHXZ			; hgeAnimation::GetFrame
 PUBLIC	?Jump@CPlayer@@QAEXXZ				; CPlayer::Jump
 EXTRN	?SetFrame@hgeAnimation@@QAEXH@Z:PROC		; hgeAnimation::SetFrame
+;	COMDAT __real@41000000
+CONST	SEGMENT
+__real@41000000 DD 041000000r			; 8
+CONST	ENDS
 ;	COMDAT __real@43340000
 CONST	SEGMENT
 __real@43340000 DD 043340000r			; 180
+CONST	ENDS
+;	COMDAT __real@42b40000
+CONST	SEGMENT
+__real@42b40000 DD 042b40000r			; 90
 ; Function compile flags: /Odtp /RTCsu /ZI
 CONST	ENDS
 ;	COMDAT ?Jump@CPlayer@@QAEXXZ
@@ -947,8 +982,13 @@ $LN1@Down:
 	ret	0
 ?Down@CPlayer@@QAEXXZ ENDP				; CPlayer::Down
 _TEXT	ENDS
+PUBLIC	__real@41400000
 PUBLIC	__real@43870000
 PUBLIC	?ZSwordA@CPlayer@@QAEXXZ			; CPlayer::ZSwordA
+;	COMDAT __real@41400000
+CONST	SEGMENT
+__real@41400000 DD 041400000r			; 12
+CONST	ENDS
 ;	COMDAT __real@43870000
 CONST	SEGMENT
 __real@43870000 DD 043870000r			; 270
@@ -1292,15 +1332,15 @@ __real@bfb999999999999a DQ 0bfb999999999999ar	; -0.1
 CONST	ENDS
 ;	COMDAT ?Control@CPlayer@@QAEXXZ
 _TEXT	SEGMENT
-$T104306 = -344						; size = 8
-$T104307 = -328						; size = 8
-$T104308 = -312						; size = 8
-$T104309 = -296						; size = 8
-$T104310 = -280						; size = 8
-$T104311 = -264						; size = 8
-$T104312 = -248						; size = 8
-$T104313 = -232						; size = 8
-$T104314 = -216						; size = 8
+$T104322 = -344						; size = 8
+$T104323 = -328						; size = 8
+$T104324 = -312						; size = 8
+$T104325 = -296						; size = 8
+$T104326 = -280						; size = 8
+$T104327 = -264						; size = 8
+$T104328 = -248						; size = 8
+$T104329 = -232						; size = 8
+$T104330 = -216						; size = 8
 _this$ = -8						; size = 4
 ?Control@CPlayer@@QAEXXZ PROC				; CPlayer::Control, COMDAT
 ; _this$ = ecx
@@ -1479,7 +1519,7 @@ $LN22@Control:
 	test	ecx, ecx
 	jne	$LN1@Control
 ; Line 94
-	lea	eax, DWORD PTR $T104306[ebp]
+	lea	eax, DWORD PTR $T104322[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1533,7 +1573,7 @@ $LN17@Control:
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104307[ebp]
+	lea	ecx, DWORD PTR $T104323[ebp]
 	call	??0b2Vec2@@QAE@MM@Z			; b2Vec2::b2Vec2
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -1541,7 +1581,7 @@ $LN17@Control:
 	call	?ApplyForce@b2Body@@QAEXABUb2Vec2@@0@Z	; b2Body::ApplyForce
 $LN15@Control:
 ; Line 100
-	lea	eax, DWORD PTR $T104308[ebp]
+	lea	eax, DWORD PTR $T104324[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1560,7 +1600,7 @@ $LN15@Control:
 	jmp	SHORT $LN10@Control
 $LN14@Control:
 ; Line 101
-	lea	eax, DWORD PTR $T104309[ebp]
+	lea	eax, DWORD PTR $T104325[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1579,7 +1619,7 @@ $LN14@Control:
 	jmp	SHORT $LN10@Control
 $LN12@Control:
 ; Line 102
-	lea	eax, DWORD PTR $T104310[ebp]
+	lea	eax, DWORD PTR $T104326[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1622,7 +1662,7 @@ $LN10@Control:
 	mov	ecx, DWORD PTR [eax]
 	call	?SetFlip@CAnimSprite@@QAEX_N00@Z	; CAnimSprite::SetFlip
 ; Line 108
-	lea	eax, DWORD PTR $T104311[ebp]
+	lea	eax, DWORD PTR $T104327[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1643,7 +1683,7 @@ $LN10@Control:
 	push	ecx
 	fld	DWORD PTR __real@40000000
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104312[ebp]
+	lea	ecx, DWORD PTR $T104328[ebp]
 	call	??0b2Vec2@@QAE@MM@Z			; b2Vec2::b2Vec2
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -1687,7 +1727,7 @@ $LN9@Control:
 	mov	ecx, DWORD PTR [eax]
 	call	?SetFlip@CAnimSprite@@QAEX_N00@Z	; CAnimSprite::SetFlip
 ; Line 117
-	lea	eax, DWORD PTR $T104313[ebp]
+	lea	eax, DWORD PTR $T104329[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1708,7 +1748,7 @@ $LN9@Control:
 	push	ecx
 	fld	DWORD PTR __real@c0000000
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104314[ebp]
+	lea	ecx, DWORD PTR $T104330[ebp]
 	call	??0b2Vec2@@QAE@MM@Z			; b2Vec2::b2Vec2
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
@@ -1863,7 +1903,7 @@ PUBLIC	?IsAwake@b2Body@@QBE_NXZ			; b2Body::IsAwake
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT ?ApplyForce@b2Body@@QAEXABUb2Vec2@@0@Z
 _TEXT	SEGMENT
-$T104335 = -216						; size = 8
+$T104351 = -216						; size = 8
 _this$ = -8						; size = 4
 _force$ = 8						; size = 4
 _point$ = 12						; size = 4
@@ -1915,7 +1955,7 @@ $LN1@ApplyForce:
 	push	ecx
 	mov	edx, DWORD PTR _point$[ebp]
 	push	edx
-	lea	eax, DWORD PTR $T104335[ebp]
+	lea	eax, DWORD PTR $T104351[ebp]
 	push	eax
 	call	??G@YA?AUb2Vec2@@ABU0@0@Z		; operator-
 	add	esp, 12					; 0000000cH

@@ -3,7 +3,7 @@
 CPlayer::CPlayer(CGame * pGame,CSpriteManager * pSprManager)
 {
 	m_pGame = pGame;
-	m_pPlayer = pSprManager->CreateAnimSprite(D3DXVECTOR3(0,0,0),L"Action",6,7,0,0,90,90);
+	m_pPlayer = pSprManager->CreateAnimSprite(D3DXVECTOR3(0,0,0),L"Role1",6,6,20,532,54,84);
 	m_pPlayer->SetHotPos(D3DXVECTOR3(30,60,0));
 	m_pPlayerControl = m_pGame->CreateBody(D3DXVECTOR3(100,100,0),40,40,false,m_pPlayer,3.0,1.0);
 	m_pPlayerControl->SetFixedRotation(true);
@@ -20,15 +20,15 @@ CPlayer::~CPlayer(void)
 void CPlayer::Stand()
 {
 	m_pPlayer->SetFrames(6);
-	m_pPlayer->SetSpeed(8);
-	m_pPlayer->SetTextureRect(0,0,90,90);
+	m_pPlayer->SetSpeed(6);
+	m_pPlayer->SetTextureRect(20,532,57,84);
 	m_AType = stand;
 }
 void CPlayer::Run()
 {
-	m_pPlayer->SetTextureRect(0,90,90,90);
-	m_pPlayer->SetFrames(10);
-	m_pPlayer->SetSpeed(12);
+	m_pPlayer->SetTextureRect(18,633,50,84);
+	m_pPlayer->SetFrames(6);
+	m_pPlayer->SetSpeed(6);
 	m_AType = run;
 }
 void CPlayer::Jump()
