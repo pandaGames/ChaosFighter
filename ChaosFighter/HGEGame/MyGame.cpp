@@ -56,4 +56,5 @@ void CMyGame::InitTextures()
 	m_pResManager->LoadTexture(L"Scene1BgBack", "Resource/Texture/Maps/chapter1/chapter1-1-3.png");
 	//chapter1 components
 	m_pResManager->LoadTexture(L"Flag_1", "Resource/Texture/Maps/chapter1/components/flag_1.png");
+	m_pResManager->LoadTexture(L"Flame_1", "Resource/Texture/Maps/chapter1/components/flame_1.png");
 }

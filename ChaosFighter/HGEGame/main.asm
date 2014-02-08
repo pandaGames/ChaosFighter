@@ -730,8 +730,8 @@ xdata$x	ENDS
 ;	COMDAT ??__Eg_pGame@@YAXXZ
 text$yc	SEGMENT
 tv74 = -232						; size = 4
-$T105785 = -224						; size = 4
-$T105786 = -212						; size = 4
+$T105792 = -224						; size = 4
+$T105793 = -212						; size = 4
 __$EHRec$ = -12						; size = 12
 ??__Eg_pGame@@YAXXZ PROC				; `dynamic initializer for 'g_pGame'', COMDAT
 ; Line 8
@@ -757,11 +757,11 @@ __$EHRec$ = -12						; size = 12
 	push	60					; 0000003cH
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T105786[ebp], eax
+	mov	DWORD PTR $T105793[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T105786[ebp], 0
+	cmp	DWORD PTR $T105793[ebp], 0
 	je	SHORT $LN3@dynamic
-	mov	ecx, DWORD PTR $T105786[ebp]
+	mov	ecx, DWORD PTR $T105793[ebp]
 	call	??0CMyGame@@QAE@XZ			; CMyGame::CMyGame
 	mov	DWORD PTR tv74[ebp], eax
 	jmp	SHORT $LN4@dynamic
@@ -769,9 +769,9 @@ $LN3@dynamic:
 	mov	DWORD PTR tv74[ebp], 0
 $LN4@dynamic:
 	mov	eax, DWORD PTR tv74[ebp]
-	mov	DWORD PTR $T105785[ebp], eax
+	mov	DWORD PTR $T105792[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
-	mov	ecx, DWORD PTR $T105785[ebp]
+	mov	ecx, DWORD PTR $T105792[ebp]
 	mov	DWORD PTR ?g_pGame@@3PAVCGame@@A, ecx	; g_pGame
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
@@ -789,7 +789,7 @@ text$yc	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$??__Eg_pGame@@YAXXZ$0:
-	mov	eax, DWORD PTR $T105786[ebp]
+	mov	eax, DWORD PTR $T105793[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx

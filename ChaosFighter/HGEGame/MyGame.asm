@@ -350,10 +350,10 @@ xdata$x	ENDS
 _TEXT	SEGMENT
 tv138 = -268						; size = 4
 tv89 = -268						; size = 4
-$T105811 = -260						; size = 4
-$T105812 = -248						; size = 4
-$T105815 = -236						; size = 4
-$T105816 = -224						; size = 4
+$T105816 = -260						; size = 4
+$T105817 = -248						; size = 4
+$T105820 = -236						; size = 4
+$T105821 = -224						; size = 4
 _this$ = -20						; size = 4
 __$EHRec$ = -12						; size = 12
 ?InitGame@CMyGame@@UAE_NXZ PROC				; CMyGame::InitGame, COMDAT
@@ -398,13 +398,13 @@ $LN1@InitGame:
 	push	20					; 00000014H
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T105812[ebp], eax
+	mov	DWORD PTR $T105817[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
-	cmp	DWORD PTR $T105812[ebp], 0
+	cmp	DWORD PTR $T105817[ebp], 0
 	je	SHORT $LN4@InitGame
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T105812[ebp]
+	mov	ecx, DWORD PTR $T105817[ebp]
 	call	??0CMenuScreen@@QAE@PAVCGame@@@Z	; CMenuScreen::CMenuScreen
 	mov	DWORD PTR tv89[ebp], eax
 	jmp	SHORT $LN5@InitGame
@@ -412,22 +412,22 @@ $LN4@InitGame:
 	mov	DWORD PTR tv89[ebp], 0
 $LN5@InitGame:
 	mov	ecx, DWORD PTR tv89[ebp]
-	mov	DWORD PTR $T105811[ebp], ecx
+	mov	DWORD PTR $T105816[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR $T105811[ebp]
+	mov	eax, DWORD PTR $T105816[ebp]
 	mov	DWORD PTR [edx+52], eax
 ; Line 24
-	push	40					; 00000028H
+	push	44					; 0000002cH
 	call	??2@YAPAXI@Z				; operator new
 	add	esp, 4
-	mov	DWORD PTR $T105816[ebp], eax
+	mov	DWORD PTR $T105821[ebp], eax
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	cmp	DWORD PTR $T105816[ebp], 0
+	cmp	DWORD PTR $T105821[ebp], 0
 	je	SHORT $LN6@InitGame
 	mov	eax, DWORD PTR _this$[ebp]
 	push	eax
-	mov	ecx, DWORD PTR $T105816[ebp]
+	mov	ecx, DWORD PTR $T105821[ebp]
 	call	??0CMission@@QAE@PAVCGame@@@Z		; CMission::CMission
 	mov	DWORD PTR tv138[ebp], eax
 	jmp	SHORT $LN7@InitGame
@@ -435,10 +435,10 @@ $LN6@InitGame:
 	mov	DWORD PTR tv138[ebp], 0
 $LN7@InitGame:
 	mov	ecx, DWORD PTR tv138[ebp]
-	mov	DWORD PTR $T105815[ebp], ecx
+	mov	DWORD PTR $T105820[ebp], ecx
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	edx, DWORD PTR _this$[ebp]
-	mov	eax, DWORD PTR $T105815[ebp]
+	mov	eax, DWORD PTR $T105820[ebp]
 	mov	DWORD PTR [edx+56], eax
 ; Line 26
 	mov	eax, DWORD PTR _this$[ebp]
@@ -465,13 +465,13 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 __unwindfunclet$?InitGame@CMyGame@@UAE_NXZ$0:
-	mov	eax, DWORD PTR $T105812[ebp]
+	mov	eax, DWORD PTR $T105817[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
 	ret	0
 __unwindfunclet$?InitGame@CMyGame@@UAE_NXZ$1:
-	mov	eax, DWORD PTR $T105816[ebp]
+	mov	eax, DWORD PTR $T105821[ebp]
 	push	eax
 	call	??3@YAXPAX@Z				; operator delete
 	pop	ecx
@@ -569,10 +569,10 @@ EXTRN	?Release@CGame@@UAEXXZ:PROC			; CGame::Release
 _TEXT	SEGMENT
 tv89 = -256						; size = 4
 tv78 = -256						; size = 4
-$T105839 = -248						; size = 4
-$T105840 = -236						; size = 4
-$T105843 = -224						; size = 4
-$T105844 = -212						; size = 4
+$T105844 = -248						; size = 4
+$T105845 = -236						; size = 4
+$T105848 = -224						; size = 4
+$T105849 = -212						; size = 4
 _this$ = -8						; size = 4
 ?Release@CMyGame@@UAEXXZ PROC				; CMyGame::Release, COMDAT
 ; _this$ = ecx
@@ -599,16 +599,16 @@ _this$ = -8						; size = 4
 	je	SHORT $LN2@Release
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+52]
-	mov	DWORD PTR $T105840[ebp], ecx
-	mov	edx, DWORD PTR $T105840[ebp]
-	mov	DWORD PTR $T105839[ebp], edx
-	cmp	DWORD PTR $T105839[ebp], 0
+	mov	DWORD PTR $T105845[ebp], ecx
+	mov	edx, DWORD PTR $T105845[ebp]
+	mov	DWORD PTR $T105844[ebp], edx
+	cmp	DWORD PTR $T105844[ebp], 0
 	je	SHORT $LN5@Release
 	mov	esi, esp
 	push	1
-	mov	eax, DWORD PTR $T105839[ebp]
+	mov	eax, DWORD PTR $T105844[ebp]
 	mov	edx, DWORD PTR [eax]
-	mov	ecx, DWORD PTR $T105839[ebp]
+	mov	ecx, DWORD PTR $T105844[ebp]
 	mov	eax, DWORD PTR [edx]
 	call	eax
 	cmp	esi, esp
@@ -626,16 +626,16 @@ $LN2@Release:
 	je	SHORT $LN1@Release
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+56]
-	mov	DWORD PTR $T105844[ebp], ecx
-	mov	edx, DWORD PTR $T105844[ebp]
-	mov	DWORD PTR $T105843[ebp], edx
-	cmp	DWORD PTR $T105843[ebp], 0
+	mov	DWORD PTR $T105849[ebp], ecx
+	mov	edx, DWORD PTR $T105849[ebp]
+	mov	DWORD PTR $T105848[ebp], edx
+	cmp	DWORD PTR $T105848[ebp], 0
 	je	SHORT $LN7@Release
 	mov	esi, esp
 	push	1
-	mov	eax, DWORD PTR $T105843[ebp]
+	mov	eax, DWORD PTR $T105848[ebp]
 	mov	edx, DWORD PTR [eax]
-	mov	ecx, DWORD PTR $T105843[ebp]
+	mov	ecx, DWORD PTR $T105848[ebp]
 	mov	eax, DWORD PTR [edx]
 	call	eax
 	cmp	esi, esp
@@ -659,6 +659,8 @@ $LN1@Release:
 	ret	0
 ?Release@CMyGame@@UAEXXZ ENDP				; CMyGame::Release
 _TEXT	ENDS
+PUBLIC	??_C@_1BA@HCCJBBCO@?$AAF?$AAl?$AAa?$AAm?$AAe?$AA_?$AA1?$AA?$AA@ ; `string'
+PUBLIC	??_C@_0DG@LMNEMKM@Resource?1Texture?1Maps?1chapter1?1c@ ; `string'
 PUBLIC	??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@ ; `string'
 PUBLIC	??_C@_0DF@GEHALMDL@Resource?1Texture?1Maps?1chapter1?1c@ ; `string'
 PUBLIC	??_C@_1BK@DHGJHBGH@?$AAS?$AAc?$AAe?$AAn?$AAe?$AA1?$AAB?$AAg?$AAB?$AAa?$AAc?$AAk?$AA?$AA@ ; `string'
@@ -672,6 +674,17 @@ PUBLIC	??_C@_0CB@EOAMNKL@Resource?1Texture?1Role?1role_1?4png@ ; `string'
 PUBLIC	??_C@_15KGOJFLP@?$AAB?$AAG?$AA?$AA@		; `string'
 PUBLIC	??_C@_0BI@LCJJCPEN@Resource?1Texture?1bg?4png?$AA@ ; `string'
 EXTRN	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z:PROC ; CResourceManager::LoadTexture
+;	COMDAT ??_C@_1BA@HCCJBBCO@?$AAF?$AAl?$AAa?$AAm?$AAe?$AA_?$AA1?$AA?$AA@
+CONST	SEGMENT
+??_C@_1BA@HCCJBBCO@?$AAF?$AAl?$AAa?$AAm?$AAe?$AA_?$AA1?$AA?$AA@ DB 'F', 00H
+	DB	'l', 00H, 'a', 00H, 'm', 00H, 'e', 00H, '_', 00H, '1', 00H, 00H
+	DB	00H						; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0DG@LMNEMKM@Resource?1Texture?1Maps?1chapter1?1c@
+CONST	SEGMENT
+??_C@_0DG@LMNEMKM@Resource?1Texture?1Maps?1chapter1?1c@ DB 'Resource/Text'
+	DB	'ure/Maps/chapter1/components/flame_1.png', 00H ; `string'
+CONST	ENDS
 ;	COMDAT ??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@
 CONST	SEGMENT
 ??_C@_1O@OLCDPIPM@?$AAF?$AAl?$AAa?$AAg?$AA_?$AA1?$AA?$AA@ DB 'F', 00H, 'l'
@@ -805,6 +818,14 @@ _this$ = -8						; size = 4
 	mov	ecx, DWORD PTR [eax+8]
 	call	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z ; CResourceManager::LoadTexture
 ; Line 59
+	push	0
+	push	0
+	push	OFFSET ??_C@_0DG@LMNEMKM@Resource?1Texture?1Maps?1chapter1?1c@
+	push	OFFSET ??_C@_1BA@HCCJBBCO@?$AAF?$AAl?$AAa?$AAm?$AAe?$AA_?$AA1?$AA?$AA@
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+8]
+	call	?LoadTexture@CResourceManager@@QAEXPB_WPBDK_N@Z ; CResourceManager::LoadTexture
+; Line 60
 	pop	edi
 	pop	esi
 	pop	ebx

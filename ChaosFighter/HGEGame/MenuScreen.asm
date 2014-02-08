@@ -288,7 +288,7 @@ __ehfuncinfo$??0CMenuScreen@@QAE@PAVCGame@@@Z DD 019930522H
 xdata$x	ENDS
 ;	COMDAT ??0CMenuScreen@@QAE@PAVCGame@@@Z
 _TEXT	SEGMENT
-$T104806 = -236						; size = 12
+$T104813 = -236						; size = 12
 _this$ = -24						; size = 4
 __$ArrayPad$ = -16					; size = 4
 __$EHRec$ = -12						; size = 12
@@ -349,7 +349,7 @@ _pGame$ = 8						; size = 4
 	push	ecx
 	fldz
 	fstp	DWORD PTR [esp]
-	lea	ecx, DWORD PTR $T104806[ebp]
+	lea	ecx, DWORD PTR $T104813[ebp]
 	call	??0D3DXVECTOR3@@QAE@MMM@Z		; D3DXVECTOR3::D3DXVECTOR3
 	sub	esp, 12					; 0000000cH
 	mov	ecx, esp
