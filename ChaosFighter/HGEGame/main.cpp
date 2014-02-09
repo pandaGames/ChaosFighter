@@ -47,7 +47,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 	g_pGame->m_pHge->System_SetState(HGE_TITLE, "HGEGame");
 
 	//Set Mouse Hide
-	g_pGame->m_pHge->System_SetState(HGE_HIDEMOUSE,true);
+	g_pGame->m_pHge->System_SetState(HGE_HIDEMOUSE,false);
 
 	//Set MAX FPS
 	g_pGame->m_pHge->System_SetState(HGE_FPS, 60);

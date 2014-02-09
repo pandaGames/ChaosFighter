@@ -1,15 +1,14 @@
-﻿生成启动时间为 2014/2/8 11:43:35。
-     1>项目“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\HGEGame\HGEGame.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2014/2/9 22:04:22。
+     1>项目“E:\毕业设计\项目\ChaosFighter\HGEGame\HGEGame.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“obj\x32\Debug\Box2D\ChaosFighter.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\Program Files\Box2D" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\x32\Debug\Box2D\\" /Fd"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.pdb" /Gd /TP /analyze- /errorReport:prompt /FAu Screen\Mission.cpp
-         Mission.cpp
-     1>d:\mycodes\chaosfighter\trunk\chaosfighter\hgegame\screen\mission.cpp(11): warning C4305: “参数”: 从“double”到“float”截断
-     1>d:\mycodes\chaosfighter\trunk\chaosfighter\hgegame\screen\mission.cpp(33): warning C4244: “参数”: 从“double”转换到“FLOAT”，可能丢失数据
-     1>d:\mycodes\chaosfighter\trunk\chaosfighter\hgegame\screen\mission.cpp(34): warning C4244: “参数”: 从“double”转换到“FLOAT”，可能丢失数据
+         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\Program Files\Box2D" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"obj\x32\Debug\Box2D\\" /Fd"E:\毕业设计\项目\ChaosFighter\Debug\Box2D.pdb" /Gd /TP /analyze- /errorReport:prompt /FAu Screen\MenuScreen.cpp
+         MenuScreen.cpp
+     1>e:\毕业设计\项目\chaosfighter\hgegame\screen\menuscreen.cpp(6): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+     1>e:\毕业设计\项目\chaosfighter\hgegame\screen\menuscreen.cpp(120): warning C4305: “+=”: 从“double”到“float”截断
        Link:
-         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.lib" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Program Files\Box2D\Box2D\Debug" d3d9.lib d3dx9.lib winmm.lib dinput8.lib dxguid.lib Box2D.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMTD.lib /NODEFAULTLIB:LIBC.lib /MANIFEST /ManifestFile:"obj\x32\Debug\Box2D\Box2D.lib.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.lib" /MACHINE:X86 obj\x32\Debug\Box2D\AnimSprite.obj
+         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\毕业设计\项目\ChaosFighter\Debug\Box2D.lib" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Program Files\Box2D\Box2D\Debug" d3d9.lib d3dx9.lib winmm.lib dinput8.lib dxguid.lib Box2D.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMTD.lib /NODEFAULTLIB:LIBC.lib /MANIFEST /ManifestFile:"obj\x32\Debug\Box2D\Box2D.lib.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\毕业设计\项目\ChaosFighter\Debug\Box2D.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\毕业设计\项目\ChaosFighter\Debug\Box2D.lib" /MACHINE:X86 obj\x32\Debug\Box2D\AnimSprite.obj
          obj\x32\Debug\Box2D\DebugDraw.obj
          obj\x32\Debug\Box2D\Game.obj
          obj\x32\Debug\Box2D\ParticleManager.obj
@@ -27,14 +26,14 @@
          obj\x32\Debug\Box2D\Player.obj
          obj\x32\Debug\Box2D\MenuScreen.obj
          obj\x32\Debug\Box2D\Mission.obj
-         HGEGame.vcxproj -> D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.lib
+         HGEGame.vcxproj -> E:\毕业设计\项目\ChaosFighter\Debug\Box2D.lib
        Manifest:
-         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"D:\MyCodes\ChaosFighter\trunk\ChaosFighter\Debug\Box2D.lib.manifest" /manifest obj\x32\Debug\Box2D\Box2D.lib.intermediate.manifest
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"E:\毕业设计\项目\ChaosFighter\Debug\Box2D.lib.manifest" /manifest obj\x32\Debug\Box2D\Box2D.lib.intermediate.manifest
        FinalizeBuildStatus:
          正在删除文件“obj\x32\Debug\Box2D\ChaosFighter.unsuccessfulbuild”。
          正在对“obj\x32\Debug\Box2D\ChaosFighter.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“D:\MyCodes\ChaosFighter\trunk\ChaosFighter\HGEGame\HGEGame.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“E:\毕业设计\项目\ChaosFighter\HGEGame\HGEGame.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:02.87
+已用时间 00:00:02.69

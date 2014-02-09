@@ -21,9 +21,9 @@ bool CMyGame::InitGame()
 	InitTextures();
 	//初始化各种场景
 	m_pMenu = new CMenuScreen(this);
-	m_pMission = new CMission(this);
+	//m_pMission = new CMission(this);
 	//指定第一屏显示哪个场景
-	m_pCurScreen = m_pMission;
+	m_pCurScreen = m_pMenu;
 
 	return true;
 }
@@ -42,13 +42,12 @@ void CMyGame::Release()
 {
 	CGame::Release();
 	SAFE_DELETE(m_pMenu);
-	SAFE_DELETE(m_pMission);
+//	SAFE_DELETE(m_pMission);
 }
 
 void CMyGame::InitTextures()
 {
 	//加载资源
-	m_pResManager->LoadTexture(L"BG","Resource/Texture/bg.png");
 	m_pResManager->LoadTexture(L"Role1","Resource/Texture/Role/role_1.png");
 	//chapter1 maps
 	m_pResManager->LoadTexture(L"Scene1BgFront", "Resource/Texture/Maps/chapter1/chapter1-1-1.png");

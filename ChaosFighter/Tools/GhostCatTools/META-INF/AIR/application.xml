@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.1">
+	<id>GhostCatTools</id>
+	<filename>GhostCatTools</filename>
+	<name>GhostCatTools</name>
+	<versionNumber>1.0.8</versionNumber>
+		         
+	<!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
+	<!-- <versionLabel></versionLabel> -->
+
+	<!-- Description, displayed in the AIR application installer.
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<!-- <description></description> -->
+
+	<!-- Copyright information. Optional -->
+	<!-- <copyright></copyright> -->
+
+	<!-- Publisher ID. Used if you're updating an application created prior to 1.5.3 -->
+	<!-- <publisherID></publisherID> -->
+
+	<initialWindow>
+		<content>GhostCatTools.swf</content>
+		<maximizable>false</maximizable>
+		<resizable>false</resizable>
+		<autoOrients>false</autoOrients>
+    	<fullScreen>false</fullScreen>
+   		<visible>false</visible>
+  	</initialWindow>
+
+	<supportedProfiles>extendedDesktop</supportedProfiles>
+	<icon>
+		<image16x16>icon16.png</image16x16>
+	</icon>
+
+	<!-- Whether the application handles the update when a user double-clicks an update version
+	of the AIR file (true), or the default AIR application installer handles the update (false).
+	Optional. Default false. -->
+	<!-- <customUpdateUI></customUpdateUI> -->
+	
+	<!-- Whether the application can be launched when the user clicks a link in a web browser.
+	Optional. Default false. -->
+	<!-- <allowBrowserInvocation></allowBrowserInvocation> -->
+
+	<!-- Listing of file types for which the application can register. Optional. -->
+	<!-- <fileTypes> -->
+
+		<!-- Defines one file type. Optional. -->
+		<!-- <fileType> -->
+
+			<!-- The name that the system displays for the registered file type. Required. -->
+			<!-- <name></name> -->
+
+			<!-- The extension to register. Required. -->
+			<!-- <extension></extension> -->
+			
+			<!-- The description of the file type. Optional. -->
+			<!-- <description></description> -->
+			
+			<!-- The MIME content type. -->
+			<!-- <contentType></contentType> -->
+			
+			<!-- The icon to display for the file type. Optional. -->
+			<!-- <icon>
+				<image16x16></image16x16>
+				<image32x32></image32x32>
+				<image48x48></image48x48>
+				<image128x128></image128x128>
+			</icon> -->
+			
+		<!-- </fileType> -->
+	<!-- </fileTypes> -->
+
+</application>
