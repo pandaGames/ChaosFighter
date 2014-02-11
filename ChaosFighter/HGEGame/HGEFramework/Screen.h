@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "SpriteManager.h"
 #include "ParticleManager.h"
+#include "SoundManager.h"
 
 class CScreen
 {
@@ -17,5 +18,6 @@ protected:
 	CGame * m_pGame;
 	CParticleManager * m_pParManager;
 	CSpriteManager * m_pSprManager;
+	CSoundManager * m_pSndManager;
 };
 

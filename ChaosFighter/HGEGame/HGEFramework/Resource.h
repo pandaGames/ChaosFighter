@@ -15,7 +15,7 @@ public:
 	~CResource(void);
 public:
 	HTEXTURE	m_hTex;
-	HEFFECT		m_hSud;
+	HEFFECT		m_hSnd;
 	HMUSIC		m_hMus;
 	int			m_nResType;
 	TCHAR		m_szResName[MAX_PATH];

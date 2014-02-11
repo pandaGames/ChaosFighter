@@ -17,6 +17,13 @@ void CResourceManager::LoadTexture(const TCHAR * resName,const char *filename,DW
 	m_lstResource.push_back(pTexRes);
 }
 
+void CResourceManager::LoadSound(const TCHAR * resName, const char *filename)
+{
+	CResource * pSndRes = new CResource(RES_SND, resName);
+	pSndRes->m_hSnd = m_pGame->m_pHge->Effect_Load(filename);
+	m_lstResource.push_back(pSndRes);
+}
+
 const CResource * CResourceManager::GetResource(int resType,const LPTSTR resName)
 {
 	list<CResource *>::iterator ite = m_lstResource.begin();

@@ -11,7 +11,8 @@ public:
 	~CResourceManager(void);
 
 	void LoadTexture(const TCHAR * resName,const char *filename,DWORD size = 0,bool bMipmap = false);
-	
+	void LoadSound(const TCHAR * resName, const char *filename);
+
 	const CResource * GetResource(int resType,const LPTSTR resName);
 	void Clear();
 protected:

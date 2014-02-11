@@ -56,5 +56,7 @@ private:
 
 	float sumTime;
 	void UpdateTitleColor( float fDeltaTime );
+
+	HEFFECT * m_pBgMusic;
 };
 

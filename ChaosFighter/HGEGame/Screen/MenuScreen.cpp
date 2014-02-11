@@ -29,6 +29,10 @@ CMenuScreen::CMenuScreen(CGame * pGame):CScreen(pGame)
 	
 	//设置标题一开始的颜色
 	m_pTitle->SetColor(0xFF000000);
+
+	//声音
+	m_pGame->m_pResManager->LoadSound(RES_SND, L"BgMusic", "snd/background.mp3");
+	m_pBgMusic = m_pSndManager->CreateSound(L"BgMusic");
 }
 
 CMenuScreen::~CMenuScreen(void)
